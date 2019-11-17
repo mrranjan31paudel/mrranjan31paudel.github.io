@@ -1,0 +1,835 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+.wide-header {
+    height: 172px;
+    width: 1500px;
+}
+    .wide-header-top {
+        height: 80px;
+        width: 1500px;
+        background: url(../images/topBackPattern.png);
+        background-repeat: repeat-x;
+    }
+        .header-top-wrapper {
+            height: 80px;
+            width: 1170px;
+            margin-left: 163px;
+            margin-right: 167px;
+        }
+            .header-top-left {
+                height: 30px;
+                width: 103px;
+                margin-left: 9px;
+                margin-top: 21px;
+                margin-bottom: 29px;
+                margin-right: 9px;
+                float: left;
+            }
+            .header-top-right {
+                height: 80px;
+                width: 779px;
+                float: right;
+            }
+                .navMenuItem {
+                    float: left;
+                    height: 33px;
+                    width: 767px;
+                    margin-top: 25px;
+                    margin-bottom: 22px;
+                    margin-right: 6px;
+                    margin-left: 6px;
+                }
+                    .navMenuItem a {
+                        line-height: 33px;
+                        color: white;
+                        display: inline-block;
+                        font-size: 11px;
+                        text-align: center;
+                        margin-right: 27px;
+                        margin-left: 27px;
+                        text-decoration: none;
+                    }
+                    .navMenuItem a:first-child {
+                        font-size: 12px;
+                        margin-right: 15px;
+                        margin-left: 15px;
+                    }
+                    .navMenuItem a:last-child {
+                        margin-right: 0px;
+                        margin-left: 23px;
+                    }
+
+    .wide-header-bottom {
+        height: 92px;
+        width: 1500px;
+        background: url(../images/topBottomBack.png);
+    }
+        .header-bottom-wrapper {
+            height: 92px;
+            margin-left: 172px;
+            margin-right: 168px;
+        }
+            .aboutus-holder {
+                float: left;
+                margin-top: 34px;
+                margin-bottom: 44px;
+                font-size: 18px;
+                color: rgb(126, 145, 141);
+            }
+            .home-aboutus {
+                font-size: 10px;
+                float: right;
+                margin-top: 34px;
+                margin-bottom: 46px;
+            }
+                .home-aboutus a {
+                    color: rgb(126, 145, 141);
+                    text-decoration: none;
+                }
+                .home-aboutus a:first-child::after {
+                    content: "/";
+                    margin: 9px;
+                }
+
+.wide-body {
+    width: 1500px;
+    height: 1478px;
+}
+    .wide-body-part-1 {
+        height: 490px;
+        width: 1500px;
+        background-color: rgb(243, 243, 243);
+    }
+        .wrapper-body-part-1 {
+            margin-left: 163px;
+            margin-right: 167px;
+            width: 1170px;
+            height: 448px;
+            padding-top: 42px;
+        }
+            .body-part-1-top {
+                height: 106px;
+                width: 1170px;
+            }
+            .body-part-1-top h2 {
+                color: rgb(230,78,79);
+            }
+            .body-part-1-top p {
+                margin-top: 18px;
+                color: rgb(132, 140, 142);
+                text-align: justify;
+                line-height: 1.5;
+                font-size: 15px;
+            }
+            .body-part-1-bottom {
+                height: 194px;
+                width: 1170px;
+                margin-top: 74px;
+                margin-bottom: 74px;
+            }
+                .why-choose-us {
+                    width: 310px;
+                    height: 194px;
+                    float: left;
+                }
+                .why-choose-us h3 {
+                    color: rgb(131, 138, 139);
+                }
+                .why-choose-us-ul {
+                    list-style-image: url(../images/arrowBullet.png);
+                    margin-left: 22px;
+                    margin-top: 22px;
+                    line-height: 1.8;
+                    font-size: 14px;
+                    color: rgb(126, 145, 141);
+
+                }
+                .what-client-say-and-mid {
+                    float: left;
+                    width: 860px;
+                    height: 194px;
+                }
+                .meter-indicator-block {
+                    width: 550px;
+                    height: 194px;
+                    float: left;
+                    color: rgb(126, 145, 141);
+                    line-height: 1.8;
+                    
+                }
+                .meter-indicator-block-para {
+                    height: 99px;
+                    width: 550px;
+                    font-size: 14px;
+                }
+                    .indicator-list-block {
+                        height: 97px;
+                    }
+                    .indicator-list-block div {
+                        display: inline-block;
+                        margin-right: 18px;
+                        width: 120px;
+                        height: 97px;
+                    }
+                    .indicator-list-block div div {
+                        height: 58px;
+                        width: 120px;
+                    }
+                        .div-Ind50-img {
+                            background: url(../images/Ind50.png);
+                        } 
+                            .div-Ind50-span {
+                                font-size: 30px;
+                                margin-top: 20px;
+                                margin-bottom: 10px;
+                                text-align: center;
+                            }
+                            .div-Ind50-text {
+                                font-size: 16px;
+                                text-align: center;
+                                margin-top: 12px;
+                                height: 12px;
+                            }
+                        .div-Ind70-img {
+                            background: url(../images/Ind70.png);
+                        } 
+                            .div-Ind70-span {
+                                font-size: 30px;
+                                margin-top: 20px;
+                                margin-bottom: 10px;
+                                text-align: center;
+                            }
+                            .div-Ind70-text {
+                                font-size: 16px;
+                                text-align: center;
+                                margin-top: 12px;
+                                height: 12px;
+                            }
+                            .div-Ind80-img {
+                                background: url(../images/Ind80.png);
+                            } 
+                                .div-Ind80-span {
+                                    font-size: 30px;
+                                    margin-top: 20px;
+                                    margin-bottom: 10px;
+                                    text-align: center;
+                                }
+                                .div-Ind80-text {
+                                    font-size: 16px;
+                                    text-align: center;
+                                    margin-top: 12px;
+                                    height: 12px;
+                                }
+                                .div-Ind100-img {
+                                    background: url(../images/Ind100.png);
+                                } 
+                                    .div-Ind100-span {
+                                        font-size: 30px;
+                                        margin-top: 20px;
+                                        margin-bottom: 10px;
+                                        text-align: center;
+                                    }
+                                    .div-Ind100-text {
+                                        font-size: 16px;
+                                        text-align: center;
+                                        margin-top: 12px;
+                                        height: 12px;
+                                    }
+
+                    .indicator-list-block div:last-child {
+                        margin-right: 0px;
+                    }
+                .what-client-say {
+                    padding-left: 35px;
+                    width: 275px;
+                    height: 194px;
+                    float: left;
+                }
+                    .what-client-say h3 {
+                        color: rgb(131, 138, 139);
+                        margin-bottom: 23px;
+                    }
+                    .client-msg {
+                        height: 146px;
+                    }
+                    .client-msg-box-only {
+                        height: 90px;
+                        background: url(../images/jhonDeoMsg.png);
+                        padding: 15px;
+                    }
+                    .client-msg-box-only div p {
+                        color: rgb(126, 145, 141);
+                        line-height: 1.5;
+                        font-size: 14px;
+                    }
+                    .client-msg-client-name {
+                        background: url(../images/jhonArrow.png);
+                        height: 16px;
+                        padding-left: 60px;
+                        padding-top: 10px;
+                        color: rgb(126, 145, 141);
+                    }
+    .wide-body-part-2 {
+        height: 550px;
+        width: 1500px;
+        background: url(../images/body2ndPart.png);
+        background-repeat: repeat-x;
+    }
+        .wrapper-body-part-2 {
+            width: 1170px;
+            height: 510px;
+            margin-left: 163px;
+            margin-right: 167px;
+            padding-top: 40px;
+        }
+            .our-team-header {
+                color: rgb(126, 141, 141);
+                font-size: 25px;
+                font-family: Arial, Helvetica, sans-serif;
+                text-align: center;   
+                padding: 40px;
+            }
+            .our-team-block-set {
+                height: 340px;
+            }
+            .our-team-block-set div:first-child {
+                margin-left: 0px;
+            }
+            .our-team-block-set div:last-child {
+                margin-right: 0px;
+            }
+        /*******************************************FIRST BLOCK************************/
+                .first-block-rel{
+                    height: 340px;
+                    width: 270px;
+                    float: left;
+                    margin: 15px;
+                    position: relative;
+                }
+                .first-block-rel:hover .first-block{
+                    background: url(../images/OurTeamBackImgActive.png);
+                    cursor: pointer;
+                    
+                }
+                .first-block-rel:hover .first-block-button{
+                    background: url(../images/OurTeamActiveButton.png);
+                    cursor: pointer;
+                }
+                .first-block-rel:hover .first-block-button a {
+                    display: block;
+                }
+                .first-block-rel:hover .first-block p {
+                    display: block;
+                }
+                .first-block-rel:hover .social-sites {
+                    display: block;
+                }
+        
+                    .first-block  {
+                        height: 315px;
+                        width: 270px;
+                        background: url(../images/ourTeamBackImg.png);
+                    }
+                    .first-block p{
+                        display: none;
+                        color: white;
+                        line-height: 1.5;
+                        font-size: 14px;
+                        padding: 36px;
+                    }
+                    .social-sites {
+                        padding-left: 40px;
+                        padding-right: 40px;
+                        padding-top: 20px;
+                        padding-bottom: 60px;
+                        height: 40px;
+                        display: none;
+                    }
+                    .social-sites a {
+                        margin-right: 5px;
+                    }
+                    .social-sites a:last-child {
+                        margin-right: 0px;
+                    }
+                    .first-block-button {
+                        position: absolute;
+                        left: 35px;
+                        bottom: 0px;
+                        height: 54px;
+                        width: 200px;
+                        z-index: 5;
+                        text-align: center;
+                        background: url(../images/OurTeamInactiveButton.png);            
+                    }
+
+                    .first-block-button a {
+                        line-height: 54px;
+                        color: white;
+                        text-decoration: none;
+                    }
+        
+        /***********************************SECOND BLOCK*********************/
+                .second-block-rel{
+                    height: 340px;
+                    width: 270px;
+                    float: left;
+                    margin: 15px;
+                    position: relative;
+                }
+                .second-block-rel:hover .second-block{
+                    background: url(../images/OurTeamBackImgActive.png);
+                    cursor: pointer;
+                }
+                .second-block-rel:hover .second-block-button{
+                    background: url(../images/OurTeamActiveButton.png);
+                    cursor: pointer;
+                }
+                .second-block-rel:hover .second-block-button a {
+                    display: block;
+                }
+                .second-block-rel:hover .second-block p {
+                    display: block;
+                }
+                .second-block-rel:hover .social-sites {
+                    display: block;
+                }
+                    .second-block {
+                        height: 315px;
+                        width: 270px;
+                        background: url(../images/ourTeamBackImg.png);
+                    }
+                    .second-block p{
+                        display: none;
+                        color: white;
+                        line-height: 1.5;
+                        font-size: 14px;
+                        padding: 36px;
+                    }
+                    .social-sites {
+                        padding-left: 40px;
+                        padding-right: 40px;
+                        padding-top: 20px;
+                        padding-bottom: 60px;
+                        height: 40px;
+                        display: none;
+                    }
+                    .social-sites a {
+                        margin-right: 5px;
+                    }
+                    .social-sites a:last-child {
+                        margin-right: 0px;
+                    }
+                    .second-block-button {
+                        position: absolute;
+                        left: 35px;
+                        bottom: 0px;
+                        height: 54px;
+                        width: 200px;
+                        z-index: 5;
+                        text-align: center;
+                        background: url(../images/OurTeamInactiveButton.png);
+                    }
+                    .second-block-button a {
+                        line-height: 54px;
+                        color: white;
+                        text-decoration: none;
+                    }
+        /*************************************THIRD BLOCK****************************************/
+                .third-block-rel{
+                    height: 340px;
+                    width: 270px;
+                    float: left;
+                    margin: 15px;
+                    position: relative;
+                }
+                .third-block-rel:hover .third-block{
+                    background: url(../images/OurTeamBackImgActive.png);
+                    cursor: pointer;
+                }
+                .third-block-rel:hover .third-block-button{
+                    background: url(../images/OurTeamActiveButton.png);
+                    cursor: pointer;
+                }
+                .third-block-rel:hover .third-block-button a {
+                    display: block;
+                }
+                .third-block-rel:hover .third-block p {
+                    display: block;
+                }
+                .third-block-rel:hover .social-sites {
+                    display: block;
+                }
+                    .third-block {
+                        height: 315px;
+                        width: 270px;
+                        background: url(../images/ourTeamBackImg.png);
+                    }
+                    .third-block p{
+                        display: none;
+                        color: white;
+                        line-height: 1.5;
+                        font-size: 14px;
+                        padding: 36px;
+                    }
+                    .social-sites {
+                        padding-left: 40px;
+                        padding-right: 40px;
+                        padding-top: 20px;
+                        padding-bottom: 60px;
+                        height: 40px;
+                        display: none;
+                    }
+                    .social-sites a {
+                        margin-right: 5px;
+                    }
+                    .social-sites a:last-child {
+                        margin-right: 0px;
+                    }
+                    .third-block-button {
+                        position: absolute;
+                        left: 35px;
+                        bottom: 0px;
+                        height: 54px;
+                        width: 200px;
+                        z-index: 5;
+                        text-align: center;
+                        background: url(../images/OurTeamInactiveButton.png);
+                    }
+                    .third-block-button a {
+                        line-height: 54px;
+                        color: white;
+                        text-decoration: none;
+                    }
+        /******************************************FOURTH BLOCK****************************************/
+                .fourth-block-rel{
+                    height: 340px;
+                    width: 270px;
+                    float: left;
+                    margin: 15px;
+                    position: relative;
+                }
+                .fourth-block-rel:hover .fourth-block{
+                    background: url(../images/OurTeamBackImgActive.png);
+                    cursor: pointer;
+                }
+                .fourth-block-rel:hover .fourth-block-button{
+                    background: url(../images/OurTeamActiveButton.png);
+                    cursor: pointer;
+                }
+                .fourth-block-rel:hover .fourth-block-button a {
+                    display: block;
+                }
+                .fourth-block-rel:hover .fourth-block p {
+                    display: block;
+                }
+                .fourth-block-rel:hover .social-sites {
+                    display: block;
+                }
+                    .fourth-block {
+                        height: 315px;
+                        width: 270px;
+                        background: url(../images/ourTeamBackImg.png); 
+                    }
+                    .fourth-block p{
+                        display: none;
+                        color: white;
+                        line-height: 1.5;
+                        font-size: 14px;
+                        padding: 36px;
+                    }
+                    .social-sites {
+                        padding-left: 40px;
+                        padding-right: 40px;
+                        padding-top: 20px;
+                        padding-bottom: 60px;
+                        height: 40px;
+                        display: none;
+                    }
+                    .social-sites a {
+                        margin-right: 5px;
+                    }
+                    .social-sites a:last-child {
+                        margin-right: 0px;
+                    }
+                    .fourth-block-button {
+                        position: absolute;
+                        left: 35px;
+                        bottom: 0px;
+                        height: 54px;
+                        width: 200px;
+                        z-index: 5;
+                        text-align: center;
+                        background: url(../images/OurTeamInactiveButton.png);
+                    }
+                    .fourth-block-button a {
+                        line-height: 54px;
+                        color: white;
+                        text-decoration: none;
+                    }
+
+    .wide-body-part-3 {
+        height: 438px;
+        width: 1500px;
+        background-color: rgb(243, 243, 243);
+    }
+        .wrapper-body-part-3 {
+            width: 1170px;
+            height: 304px;
+            padding-left: 163px;
+            padding-right: 167px;
+            padding-top: 67px;
+            padding-bottom: 67px;
+        }
+            .best-solution-block {
+                width: 940px;
+                padding-left: 115px;
+                padding-right: 115px;
+            }
+                .best-solution-header {
+                    color: rgb(230,78,79);
+                    font-size: 27px;
+                    text-align: center;
+                }
+                .best-solution-para {
+                    color: rgb(126, 145, 141);
+                    text-align: center;
+                    font-size: 14px;
+                    margin-top: 15px;
+                    line-height: 1.5;
+                }
+            
+            .happy-slider-wrapper {
+                height: 125px;
+                width: 1170px;
+            }
+            .happy-slider {
+                height: 40px;
+                width: 1170px;
+                padding-top: 45px;
+            }
+                .our-happy-txt-line {
+
+                    float: left;
+                    margin-right: 20px;
+                    background: url(../images/slideLineSeg.png);
+                    background-repeat: repeat-x;
+                    width: 1048px;
+                }
+                .our-happy-txt {
+                    float: left;
+                    padding-right: 15px;
+                    width: fit-content;
+                    background-color: rgb(243, 243, 243);
+                    color: rgb(126, 145, 141);
+                    text-align: center;
+                    line-height: 40px;
+                }
+                .our-happy-dot {
+                    float: left;
+                    height: 40px;
+                    width: 8px;
+                    background: url(../images/lineDot.png);
+                }
+
+                    .slide-button {
+                        float: right;
+                        width: 100px;
+                    }
+                        .slide-button div {
+                            margin-right: 15px;
+                            display: inline-block;
+                        }
+                        .slide-button div:last-child {
+                            margin-right: 0px;
+                        }
+                        .slide-button div a {
+                            display: block;
+                        }
+                        .slide-button-left {
+                            height: 40px;
+                            width: 40px;
+                            background: url(../images/slideButLeftgray.png);
+                        }
+                        .slide-button-left:hover {
+                            background: url(../images/slideButLeft.png);
+                            cursor: pointer;
+                        }
+                        .slide-button-right {
+                            height: 40px;
+                            width: 40px;
+                            background: url(../images/slideButRightgray.png);
+                        }
+                        .slide-button-right:hover {
+                            background: url(../images/slideButRight.png);
+                            cursor: pointer;
+                        }
+            .jQ-image-block img {
+                margin-right: 25px;
+            }
+            .jQ-image-block img:last-child {
+                margin-right: 0px;
+            }
+
+.wide-footer {
+    height: 350px;
+    width: 1500px;
+}
+    .wide-footer-top {
+        height: 300px;
+        width: 1500px;
+        background: url(../images/footBackPattern.png);
+        background-repeat: repeat-x;
+    }
+        .wrapper-footer-top {
+            width: 1130px;
+            height: 220px;
+            padding-left: 169px;
+            padding-right: 201px;
+            padding-top: 45px;
+            padding-bottom: 35px;
+        }
+            .tollens-desc {
+                width: 360px;
+                height: 220px;
+                float: left;
+                margin-right: 35px;
+            }
+                .tollens-desc-txt p {
+                    color: white;
+                    font-size: 13px;
+                    margin-top: 15px;
+                    line-height: 1.8;
+                }
+                .tollens-desc-contacts p{
+                    margin-top: 20px;
+                    line-height: 1.5;
+                    color: white;
+
+                }
+            .comp-comm-blog {
+                width: 735px;
+                height: 220px;
+                float: right;
+            }
+                .comp-comm {
+                    float: left;
+                    width: 320px;
+                    height: 220px;
+                    margin-right: 80px;
+                }
+                    .company {
+                        float: left;
+                    }
+                     .company-header {
+                        margin-top: 7px;
+                        color: rgb(69, 126, 120);
+                        font-size: 18px;
+                     }
+                     .company-list {
+                         margin-top: 20px;
+                         margin-left: 30px;
+                     }
+                     .company-list ul{
+                        list-style-image: url(../images/bulletFooter.png);
+                        line-height: 1.8;
+                        font-size: 14px;
+                        
+                     }
+                     .company-list ul a {
+                        text-decoration: none;
+                        color: white;
+                     }
+                     .community {
+                        float: right;
+                     }
+                     .community-header {
+                        margin-top: 7px;
+                        color: rgb(69, 126, 120);
+                        font-size: 18px;
+                     }
+                     .community-list {
+                         margin-top: 20px;
+                         margin-left: 30px;
+                     }
+                     .community-list ul{
+                        list-style-image: url(../images/bulletFooter.png);
+                        line-height: 1.8;
+                        font-size: 14px;
+                        
+                     }
+                     .community-list ul a {
+                        text-decoration: none;
+                        color: white;
+                     }
+                .blog {
+                    float: right;
+                    width: 335px;
+                    height: 220px;
+                }
+                    .blog-header {
+                        color: white;
+                        font-size: 22px;
+                    }
+                    .blog-list {
+                        margin-top: 20px;
+                    }
+                    .blog-list div {
+                        height: 70px;
+                        width: 335px;
+                        margin-bottom: 15px;
+                    }  
+
+                        .blog-list div div {
+                            color: white;
+                            margin-right: 20px;
+                        }
+                        .blog-list div div:first-child {
+                            height: 70px;
+                            width: 70px;
+                            float: left;
+                        }
+                        .blog-list div div:last-child {
+                            float: left;
+                            height: 70px;
+                            width: 225px;
+                            margin-right: 0px;
+                            text-align: left;
+                            line-height: 1.5;
+                        }
+                        .blog-item-date {
+                            font-size: 17px;
+                            color: rgb(69, 126, 120);
+                        }
+    .wide-footer-bottom {
+        height: 50px;
+        width: 1500px;
+        background-color: rgb(107, 180, 173);
+    }
+        .wrapper-footer-bottom {
+            height: 22px;
+            width: 1165px;
+            padding-left: 166px;
+            padding-right: 169px;
+            padding-top: 14px;
+            padding-bottom: 14px;
+        }
+            .tollens-2013 {
+                float: left;
+                font-size: 12px;
+                line-height: 22px;
+                color: white;
+            }
+            .social-sites-block {
+                float: right;
+            }
+            .social-sites-block a {
+                width: 22px;
+                height: 22px;
+                display: inline-block;
+                margin-right: 23px;
+            }
+            .social-sites-block a:last-child {
+                margin-right: 0px;
+            }
+    
