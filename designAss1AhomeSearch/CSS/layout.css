@@ -313,7 +313,7 @@ body {
                     
                 }
                 .first-block-rel:hover .first-block-button{
-                    background: url(https://mrranjan31paudel.github.io/designAss1AhomeSearch/images/OurTeamActiveButton.png);
+                    background: url(https://mrranjan31paudel.github.io/designAss1AhomeSearch/images/OurTeamAcBut.png);
                     cursor: pointer;
                 }
                 .first-block-rel:hover .first-block-button a {
@@ -360,7 +360,7 @@ body {
                         width: 200px;
                         z-index: 5;
                         text-align: center;
-                        background: url(https://mrranjan31paudel.github.io/designAss1AhomeSearch/images/OurTeamInactiveButton.png);            
+                        background: url(https://mrranjan31paudel.github.io/designAss1AhomeSearch/images/OurTeamInacBut.png);            
                     }
 
                     .first-block-button a {
@@ -382,7 +382,7 @@ body {
                     cursor: pointer;
                 }
                 .second-block-rel:hover .second-block-button{
-                    background: url(https://mrranjan31paudel.github.io/designAss1AhomeSearch/images/OurTeamActiveButton.png);
+                    background: url(https://mrranjan31paudel.github.io/designAss1AhomeSearch/images/OurTeamAcBut.png);
                     cursor: pointer;
                 }
                 .second-block-rel:hover .second-block-button a {
@@ -428,7 +428,7 @@ body {
                         width: 200px;
                         z-index: 5;
                         text-align: center;
-                        background: url(https://mrranjan31paudel.github.io/designAss1AhomeSearch/images/OurTeamInactiveButton.png);
+                        background: url(https://mrranjan31paudel.github.io/designAss1AhomeSearch/images/OurTeamInacBut.png);
                     }
                     .second-block-button a {
                         line-height: 54px;
@@ -448,7 +448,7 @@ body {
                     cursor: pointer;
                 }
                 .third-block-rel:hover .third-block-button{
-                    background: url(https://mrranjan31paudel.github.io/designAss1AhomeSearch/images/OurTeamActiveButton.png);
+                    background: url(https://mrranjan31paudel.github.io/designAss1AhomeSearch/images/OurTeamAcBut.png);
                     cursor: pointer;
                 }
                 .third-block-rel:hover .third-block-button a {
@@ -494,7 +494,7 @@ body {
                         width: 200px;
                         z-index: 5;
                         text-align: center;
-                        background: url(https://mrranjan31paudel.github.io/designAss1AhomeSearch/images/OurTeamInactiveButton.png);
+                        background: url(https://mrranjan31paudel.github.io/designAss1AhomeSearch/images/OurTeamInacBut.png);
                     }
                     .third-block-button a {
                         line-height: 54px;
@@ -514,7 +514,7 @@ body {
                     cursor: pointer;
                 }
                 .fourth-block-rel:hover .fourth-block-button{
-                    background: url(https://mrranjan31paudel.github.io/designAss1AhomeSearch/images/OurTeamActiveButton.png);
+                    background: url(https://mrranjan31paudel.github.io/designAss1AhomeSearch/images/OurTeamAcBut.png);
                     cursor: pointer;
                 }
                 .fourth-block-rel:hover .fourth-block-button a {
@@ -560,7 +560,7 @@ body {
                         width: 200px;
                         z-index: 5;
                         text-align: center;
-                        background: url(https://mrranjan31paudel.github.io/designAss1AhomeSearch/images/OurTeamInactiveButton.png);
+                        background: url(https://mrranjan31paudel.github.io/designAss1AhomeSearch/images/OurTeamInacBut.png);
                     }
                     .fourth-block-button a {
                         line-height: 54px;
