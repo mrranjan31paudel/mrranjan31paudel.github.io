@@ -8,50 +8,104 @@ body {
 }
         .wide-header-top {
             background-image: url(../images/topBackPattern.png);
+            background-color: rgb(118, 199, 193);
             background-position: bottom;
             background-repeat: repeat-x;
-            padding-left: 10.8667%;
-            padding-right: 11.1333%;
-            padding-bottom: 1.7094%;
-            padding-top: 1.7949%;
+            padding-bottom: 26px;
+            padding-top: 25px;
+            
         }
         
         .wrapper-header-top {
-            width: 73.15em;
+            width: 78em;
+            position: relative;
+            margin: 0px auto;
+            
         }
             .tollens-logo {
-                width: 8.8034%;
-                float: left; 
+                width: 30.7692%;
+                float: left;
             }
            .tollens-logo img {
-                width: 100%;
+                width: 28.6111%;
+                float: left;
             }
 
             .header-link-list {
-                float: right;
-                width: 85.1966%;
+                
+                width: 69.2308%;
+                list-style-type: none;
+                display: inline-block;
                 
             }
-            .header-link-list ul{
-                list-style-type: none;
-                float: right;
-            }
-            .header-link-list ul a {
-                text-decoration: none;
+            .header-link-list li{
+                width: 12.8395%; 
                 float: left;
-                line-height: 6.8376%;                
+                text-align: center;
             }
-            .header-link-list ul a:hover{
+            .header-link-list li:last-child {
+                width: 4.1975%;
+                height: 33px;
+                background-repeat: no-repeat;
+            }
+            .header-link-list a {
+                text-decoration: none;
+                color: white;                   
+                line-height: 33px;
+                font-size: 0.75em;       
+                text-align: center;
+                display: block;
+            }
+            
+            .link-only:hover{
                 background-image: url(../images/headerLinkBack.png);
                 background-repeat: no-repeat;
-                
+                cursor: pointer;
+            }
+            .dropdown img{
+                float: left;
+            }
+            .dropdown {
+                text-align: center;
+                color: white;
+                font-size: 0.75em;
+                line-height: 33px;
+            }
+            .dropdown:hover {
+                background-image: url(../images/headerLinkBack.png);
+                background-repeat: no-repeat;
+                cursor: pointer;
+            }
+            .search-icon {
+                background: url(../images/searchIcon.png);
+                margin: 0 2.4691%;
+            }
+            .search-icon input {
+                display: none;
+                position: absolute;
+                z-index: 5;
+                width: 190px;
+                height: 30px;
+                padding-top: 10px;
+                padding-bottom: 5px;
+                padding-left: 5px;
+                padding-right: 5px;
+                right: 20px;
+                bottom: -45px;
+                background: url(../images/searchBoxBack.png);
+            }
+            .search-icon:hover {
+                background: url(../images/searchIconClicked.png);
+                cursor: pointer;
+            }
+            .search-icon:hover input {
+                display: block;
             }
 
+
         .wide-header-bottom {
-            width: 100%;
             background: url(../images/topBottomBack.png);
             background-repeat: no-repeat;
-            background-size: contain;
         }
         
     /*.wide-body {
