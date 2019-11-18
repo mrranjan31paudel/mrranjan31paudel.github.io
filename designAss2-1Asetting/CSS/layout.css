@@ -1,55 +1,50 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
 }
-
-    .wide-header {
-        width: 100%;
-        
-    }
-        /*.wide-header div {
-            display: block;
-        }*/
+.clearfix {
+    content: "";
+    clear: both;
+    display: table;
+}
         .wide-header-top {
-            width: 100%;
-            /*height: 46.5116%;*/
-            background-image: url(../images/topTopBack.png);
-            background-repeat: no-repeat;
-            background-size: cover;
+            background-image: url(../images/topBackPattern.png);
+            background-position: bottom;
+            background-repeat: repeat-x;
             padding-left: 10.8667%;
             padding-right: 11.1333%;
-            padding-top: 21px;
-            padding-bottom: 29px;
+            padding-bottom: 1.7094%;
+            padding-top: 1.7949%;
         }
         
-        .wrapper-header-top div{
-            display: inline-block;
+        .wrapper-header-top {
+            width: 73.15em;
         }
             .tollens-logo {
                 width: 8.8034%;
-                /*float: left;*/
+                float: left; 
             }
-            .tollens-logo img{
+           .tollens-logo img {
                 width: 100%;
-                height: 100%;
             }
-            .header-link-list {
-                width: 85.1966%;
-            }
-            .header-link-list div {
-                width: 9.7469;
-                float: right;
-                
-                text-align: center; 
-            }
-            .header-link-list div:hover{
-                background-image: url(../images/headerLinkBack.png);
-            }
-            .header-link-list div a {
-                text-decoration: none;
-                color: white;
-                font-size: 10px;
-                margin: 15px;
 
+            .header-link-list {
+                float: right;
+                width: 85.1966%;
+                
+            }
+            .header-link-list ul{
+                list-style-type: none;
+                float: right;
+            }
+            .header-link-list ul a {
+                text-decoration: none;
+                float: left;
+                line-height: 6.8376%;                
+            }
+            .header-link-list ul a:hover{
+                background-image: url(../images/headerLinkBack.png);
+                background-repeat: no-repeat;
+                
             }
 
         .wide-header-bottom {

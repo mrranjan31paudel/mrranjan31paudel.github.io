@@ -163,6 +163,13 @@ body {
                     width: 550px;
                     font-size: 14px;
                 }
+                .meter-indicator-block-para p a {
+                    color: red;
+                }
+                .meter-indicator-block-para p a:hover {
+                    text-decoration: none;
+                }
+
                     .indicator-list-block {
                         height: 97px;
                     }
