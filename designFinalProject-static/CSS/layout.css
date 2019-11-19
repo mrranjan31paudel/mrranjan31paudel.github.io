@@ -36,21 +36,56 @@ body {
             list-style-type: none;
         }
             .header-sites-holder li {
-                background-image: url(../images/fbIconInac.png);
-                background-repeat: no-repeat;
                 display: inline-block;
                 margin: 10px;
             }
+                .fbIcon {
+                    background-image: url(../images/fbIconInac.png);
+                    background-repeat: no-repeat;
+                }
+                .twIcon {
+                    background-image: url(../images/twitterIconInac.png);
+                    background-repeat: no-repeat;
+                }
+                .pinIcon {
+                    background-image: url(../images/pinIconInac.png);
+                    background-repeat: no-repeat;
+                }
+                .instaIcon {
+                    background-image: url(../images/instaIconInac.png);
+                    background-repeat: no-repeat;
+                }
+                .dribIcon {
+                    background-image: url(../images/dribIconInac.png);
+                    background-repeat: no-repeat;
+                }
             .header-sites-holder li:last-child {
                 margin-right: 0px;
             }
             .header-sites-holder li:first-child {
                 margin-left: 0px;
             }
-            .header-sites-holder li a:hover {
-                background-image: url(../images/fbIconAc.png);
-                background-repeat: no-repeat;
-            }  
+                .fbIcon a:hover {
+                    background-image: url(../images/fbIconAc.png);
+                    background-repeat: no-repeat;
+                }
+                .twIcon a:hover {
+                    background-image: url(../images/twitterIconAc.png);
+                    background-repeat: no-repeat;
+                }
+                .pinIcon a:hover {
+                    background-image: url(../images/pinIconAc.png);
+                    background-repeat: no-repeat;
+                }
+                .instaIcon a:hover {
+                    background-image: url(../images/instaIconAc.png);
+                    background-repeat: no-repeat;
+                }
+                .dribIcon a:hover {
+                    background-image: url(../images/dribIconAc.png);
+                    background-repeat: no-repeat;
+                }
+
         .hot-line {
             line-height: 40px;
             float: right;
@@ -102,7 +137,7 @@ body {
                 margin-right: 16px;
                 color: black;
                 text-decoration: none;
-                font-size: 10px;  
+                font-size: 11px;  
                 display: inline-block;
                 
             }
@@ -203,5 +238,32 @@ body {
         .our-customers-logo figure:first-child {
             margin-left: 0px;
         }
+.third-container {
+    width: 1920px;
+    height: 760px;
+    margin: 0px auto;
+    background-image: url(../images/thirdblockBack.png);
+}
 
+
+.fourth-container {
+    width: 1920px;
+    height: 925px;
+    margin: 0px auto;
+    background-image: url(../images/fourthblockBack.png);
+}
+
+.fifth-container {
+    width: 1920px;
+    height: 1078px;
+    margin: 0px auto;
+    background-image: url(../images/fifthblockBack.png);
+}
+
+footer {
+    width: 1920px;
+    height: 406px;
+    margin: 0px auto;
+    background-image: url(../images/footerBack.png);
+}
         
