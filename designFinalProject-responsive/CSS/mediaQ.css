@@ -1,0 +1,17 @@
+@media screen and (max-width: 768px) {  /*for ipad*/
+    .nav-no-logo {
+        display: none;
+    }
+    .nav-dropdown:hover .drop-menu {
+        display: block;
+    }
+    .main-container {
+        width: 48em;
+    }
+  }
+@media screen and (min-width: 360px) {  /*for galaxy s5*/
+
+}
+@media screen and (min-width: 375px) {  /*for iphone x*/
+
+}
