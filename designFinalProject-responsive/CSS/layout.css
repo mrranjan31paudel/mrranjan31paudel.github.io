@@ -16,35 +16,36 @@ body {
     font-family: roboto;
 }
 .main-container {
-    width: 120em;
+    /*width: 100%;*/
     margin: 0px auto;
     overflow: auto;
 }
 .first-container {
-    width: 100%;
+    /*width: 100%;*/
     background-image: url(../images/topBackground.png);
     background-position: bottom;
     background-repeat: no-repeat;
     margin: 0px auto;
-    
 }
 header {
     background-color: rgba(255,255,255,0.94);
-    width: 100%;
+    /*width: 100%;*/
 }
     .header-wrapper {
-        margin: 0px auto;
-        width: 59.375%;
         
+        /*width: 59.375%;*/
+        width: 100%;
+        padding: 0 0.7812%;
+        /*margin: 0px auto;*/
     }
         .header-sites-holder {
-            width: 17.1053%;
+            width: 30.7692%;
             float: left;
             list-style-type: none;
         }
             .header-sites-holder li {
                 display: inline-block;
-                margin: 10px;
+                margin: 2.7778%;
             }
                 .fbIcon {
                     background-image: url(../images/fbIconInac.png);
@@ -66,11 +67,8 @@ header {
                     background-image: url(../images/dribIconInac.png);
                     background-repeat: no-repeat;
                 }
-            .header-sites-holder li:last-child {
-                margin-right: 0px;
-            }
             .header-sites-holder li:first-child {
-                margin-left: 0px;
+                margin-left: 0;
             }
                 .fbIcon a:hover {
                     background-image: url(../images/fbIconAc.png);
@@ -96,6 +94,7 @@ header {
         .hot-line {
             line-height: 40px;
             float: right;
+            padding-right: 10px;
         }
             .hot-line-txt {
                 color: black;
@@ -109,7 +108,8 @@ header {
 
 .nav-only {
     background-color: rgba(255,255,255,0.94);
-    width: 100%;
+    /*width: 100%;*/
+    margin: 0px auto;
     background-image: url(../images/headerline.png);
     background-repeat: repeat-x;
     background-position: top;
@@ -117,7 +117,9 @@ header {
 }
     .nav-wrapper {
         margin: 0px auto;
-        width: 59.375%;   
+        /*width: 59.375%; */
+        width: 100%;
+        padding: 0 0.7812%;  
     }
         .nav-logo {
             float: left;
@@ -130,7 +132,7 @@ header {
         }
         .nav-list-dropdown {
             float: right;
-            width: 55.7895%;
+            width: 54.3590%;
         }
             .nav-no-logo {
                 width: 92.7673%;
@@ -140,54 +142,61 @@ header {
                 padding-left: 13px;
                 padding-right: 6px;
                 line-height: 70px;
-                margin-left: 16px;
-                margin-right: 16px;
+                margin: 0 2.7119%;
                 color: black;
                 text-decoration: none;
-                font-size: 11px;  
+                font-size: 11px;
                 display: inline-block;
-                
+            }
+            .nav-no-logo a:first-child {
+                margin-left: 0;
+            }
+            .nav-no-logo a:last-child {
+                margin-right: 0;
             }
             .nav-no-logo a:hover {
                 background-image: url(../images/navlinkback.png);
                 background-position: top;
                 background-repeat: repeat-x;
-                
             }
             .nav-dropdown {
                 position: relative;
                 padding-top: 25px;
                 padding-bottom: 19px;
+                padding-right: 10px;
                 width: 20px;
                 height: 16px;
                 float:right;
-                background-image: url(../images/navBarIcon.png);
+                background-image: url(../images/navBarIconClicked.png);
                 background-repeat: no-repeat;
                 background-position: center;
-                /*display: none;*/
             }
             .drop-menu {
                display: none;
                position: absolute;
-               top: 17px;
+               top: 40px;
                right: 0px;
+               width: 200px;
+               box-shadow: 0px 0px 8px rgba(216, 215, 215, 0.5);
             }
             .drop-menu a {
                 text-decoration: none;
                 color: black;
-                background-color: white;
-                line-height: 1.5;
+                background-color: rgb(238, 238, 238);
+                line-height: 40px;
                 font-size: 12px;
-                height: 20px;
-                width: 100px;
+                height: 40px;
+                width: 200px;
                 display: block;
                 text-align: center;
-                background-image: url(../images/dropdownBack.png);
-                background-repeat: no-repeat;
+            }
+            .drop-menu a:last-child {
+                background-image: none;
             }
             .drop-menu a:hover {
+                background-color: white;
                 background-image: url(../images/dropdownBackHover.png);
-                background-repeat: no-repeat;
+                background-repeat: repeat-y;
             }
     .first-container-content {
         padding-top: 285px;
@@ -213,7 +222,6 @@ header {
         }
         .explore-now-button {
             width: 140px;
-            margin-top: 40px;
             margin: 0px auto;
             margin-top: 40px;
             border-radius: 25px;
@@ -234,20 +242,23 @@ header {
             background-color: rgb(76, 175, 80);;
         }
 .second-container {
-    width: 100%;
+    /*width: 100%;*/
     background-image: url(../images/ourcustomersBack.png);
     background-repeat: repeat-x;
+    background-position: center;
     background-color: white;
     margin: 0px auto;
 }
     .our-customers-block {
-        width: 59.375%;
+        /*width: 59.375%;*/
+        width: 100%;
+        padding: 0 0.7812%;
         margin: 0px auto;
         padding-top: 43px;
         padding-bottom: 37px;
     }
         .our-customers-txt {
-            width: 31.5789%;
+            width: 30.7692%;
             float: left;   
         }
         .our-customers-txt .first.some-text{
@@ -264,28 +275,34 @@ header {
         }
         .our-customers-logo {
             float: right;
-            width: 59.8246%;
+            width: 58.3761%;
         }
         .our-customers-logo figure {
             display: inline-block;
-            margin: 0px 30px;
+            margin: 0px 4.3924%;
         }
         .our-customers-logo figure:last-child {
-            margin-right: 0px;
+            margin-right: 0;
+        }
+        .our-customers-logo figure:first-child {
+            margin-left: 0;
         }
         
 .third-container {
-    width: 100%;
-    margin: 0px auto;
+    /*width: 100%;*/
     background-image: url(../images/thirdblockBack.png);
     background-repeat: no-repeat;
-}
-.third-container-wrapper {
-    width: 59.375%;
+    background-position: bottom;
     margin: 0px auto;
 }
+.third-container-wrapper {
+    /*width: 59.375%;*/
+    width: 100%;
+    margin: 0px auto;
+    padding: 0 0.7812%;
+}
     .third-container-content {
-        width: 68.7895%;
+        width: 64.1026%;
         padding-top: 165px;
         padding-bottom: 75px;
         float: right;
@@ -308,37 +325,29 @@ header {
         .our-services-list-block {
             width: 100%;
             padding-top: 100px;
-            
         }
         .our-services-list-one {
-            width: 750px;
+            width: 100%;
             padding-bottom: 80px;
         }
         .our-services-list-two {
-            width: 750px;
+            width: 100%;
             padding-bottom: 80px;
         }
         .our-services-list-item {
-            width: 44.6667%;
-            display: inline-block;
-            margin-left: 75px;
-        }
-        .our-services-list-one {
-            width: 100%;
-        }
-        .our-services-list-two{
-            width: 100%;
+            width: 48%;
+            float: right;
         }
             .our-services-list-one div:first-child{
-                margin-left: 0px;
+                float: left;
             }
             .our-services-list-two div:first-child{
-                margin-left: 0px;
+                float: left;
             }
             
                 .list-item-img-cycle {
                     float: left;
-                    width: 14.9254%;
+                    width: 50px;
                     background-image: url(../images/cycleInac.png);
                     background-repeat: no-repeat;
 
@@ -348,7 +357,7 @@ header {
                 }
                 .list-item-img-light {
                     float: left;
-                    width: 14.9254%;
+                    width: 50px;
                     background-image: url(../images/lightInac.png);
                     background-repeat: no-repeat;
                     
@@ -358,7 +367,7 @@ header {
                 }
                 .list-item-img-fileclip {
                     float: left;
-                    width: 14.9254%;
+                    width: 50px;
                     background-image: url(../images/fileclipInac.png);
                     background-repeat: no-repeat;
                     
@@ -368,7 +377,7 @@ header {
                 }
                 .list-item-img-rightmark {
                     float: left;
-                    width: 14.9254%;
+                    width: 50px;
                     background-image: url(../images/rightmarkInac.png);
                     background-repeat: no-repeat;
                     
@@ -378,8 +387,8 @@ header {
                 }
                 .list-item-txt {
                     float: right;
-                    width: 74.6269%;
-                    padding-left: 20px;
+                    width: 70.8333%;
+                    padding-left: 8.0556%;
                     background-image: url(../images/ourservlistitemseperator.png);
                     background-position: left;
                     background-repeat: repeat-y;
@@ -397,10 +406,11 @@ header {
                         color: rgb(132, 145, 164);
                     }
 .fourth-container {
-    width: 100%;
-    margin: 0px auto;
+    /*width: 100%;*/
     background-image: url(../images/fourthblockBack.png);
     background-repeat: no-repeat;
+    background-position: bottom;
+    margin: 0px auto;
 }
     .fourth-container-wrapper {
         width: 39.0625%;
@@ -437,8 +447,7 @@ header {
         }
         .statistics-list-item {
             width: 35.9551%;
-            display: inline-block;
-            margin-left: 115px;
+            float: right;
         }
         
         .statistics-block div div span{
@@ -466,17 +475,18 @@ header {
                 color: rgb(244, 67, 54);
             }
         .statistics-list-one div:first-child {
-            margin-left: 0px;
+            float: left;
         }
         .statistics-list-two div:first-child {
-            margin-left: 0px;
+            float: left;
         }
 
 .fifth-container {
-    width: 100%;
-    margin: 0px auto;
+    /*width: 100%;*/
     background-image: url(../images/fifthblockBack.png);
     background-repeat: no-repeat;
+    background-position: bottom;
+    margin: 0px auto;
 }
     .fifth-container-wrapper {
         width: 39.0625%;
@@ -502,14 +512,15 @@ header {
                 width: 100%;
             }
         .feedback-block {
-            width: 750px;
+            width: 100%;
             padding-top: 100px;
             margin: 0px auto;
         }
         
         .feedback-form {
+            width: 82.6667%;
             border-radius: 8px;
-            padding: 65px;
+            padding: 65px 8.6667%;
             box-shadow: 0px 0px 15px rgba(216, 215, 215, 0.637);
             background-color: white;
         }
@@ -526,28 +537,28 @@ header {
             font-size: 16px;
         }
         .first-last-name {
-            width: 620px;
+            width: 100%;
         }
         .first-name-block {
-            margin-right: 15px;
-            width: 300px;
+            margin-right: 2.4194%;
+            width: 48.3871%;
             float: left;
         }
         .last-name-block {
             float: right;
-            width: 300px;
+            width: 48.3871%;
         }
         .feedback-form .email-address {
-            width: 620px;
+            width: 100%;
         }
         .feedback-form .first-name {
-            width: 300px;
+            width: 100%;
         }
         .feedback-form .last-name {
-            width: 300px;
+            width: 100%;
         }
         .feedback-form .message {
-            width: 620px;
+            width: 100%;
             background-color: rgb(245, 245, 245);
             border: 0px;
             border-radius: 4px;
@@ -572,19 +583,22 @@ header {
             cursor: pointer;
         }
 footer {
-    width: 100%;
-    margin: 0px auto;
+    /*width: 100%;*/
     background-image: url(../images/footerBack.png);
     background-repeat: no-repeat;
+    background-position: bottom;
+    margin: 0px auto;
 }
 .footer-wrapper {
-    width: 59.375%;
+    /*width: 59.375%;*/
+    width: 100%;
+    padding: 0 0.7812%;
     padding-top: 69px;
     padding-bottom: 80px;
     margin: 0px auto;
 }
     .firefly-desc-block {
-        width: 31.5789%;
+        width: 30.7692%;
         float: left;
     }
         .firefly-logo {
@@ -616,11 +630,10 @@ footer {
         .copyright-txt {
             font-size: 14px;
             color: rgb(132, 145, 164);
-            
         }
     .cat-comm-follow-block {
         float: right;
-        width: 51.3158%;
+        width: 50%;
     }
         .cat-comm-block {
             float: left;
@@ -637,7 +650,7 @@ footer {
                 }
                 .category-block ul {
                     list-style-type: none;
-                    margin-left: 5px;
+                    margin-left: 2.3809%;
                 }
                 .category-block ul a {
                     text-decoration: none;
@@ -659,7 +672,7 @@ footer {
                 }
                 .community-block ul {
                     list-style-type: none;
-                    margin-left: 5px;
+                    margin-left:  2.3809%;
                 }
                 .community-block ul a {
                     text-decoration: none;
@@ -681,11 +694,12 @@ footer {
             }
             .follow-block ul {
                 list-style-type: none;
+                width: 100%;
             }   
                 .follow-block ul li {
                     width: 24px;
                     display: inline-block;
-                    margin-right: 10px;
+                    margin-right: 6.0606%;
                 }
                 .twimg a {
                     background-image: url(../images/twitterIconInacBot.png);
