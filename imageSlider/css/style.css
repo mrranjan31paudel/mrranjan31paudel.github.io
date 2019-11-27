@@ -1,10 +1,9 @@
 #carousel-container {
-    width: 320px;
     margin: 0px auto;
     overflow: hidden;
     border: 1px;
     box-shadow: 0px 0px 10px rgb(39, 39, 39);
-    
+    /* background-color: rgb(15, 90, 228); */
 }
 #image-wrapper img {
     float: left;
