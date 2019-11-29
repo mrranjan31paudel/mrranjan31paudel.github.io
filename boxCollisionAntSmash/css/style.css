@@ -5,3 +5,14 @@
     margin: 0px auto;
     position: relative;
 }
+#ant-smash-link {
+    margin: 0px auto;
+}
+#ant-smash-link a{
+    text-align: center;
+    font-size: 35px;
+    color: red;
+}
+#ant-smash-link a:hover {
+    text-decoration: none;
+}

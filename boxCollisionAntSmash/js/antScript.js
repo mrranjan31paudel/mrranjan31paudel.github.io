@@ -3,11 +3,11 @@
     function Box(parentElement) {
       this.x = 10;
       this.y = 10;
-      this.speedXdir = -1;
-      this.speedYdir = 1;
-      this.width = 20;
-      this.height = 20;
-      this.color = null;
+      this.speedXdir = 0;
+      this.speedYdir = 0;
+      this.width = 30;
+      this.height = 30;
+      this.backImgName = '';
       this.element = null;
       this.parentElement = parentElement;
       var that = this;
@@ -45,21 +45,33 @@
           yDir = -1;
         }
         this.speedYdir = yDir;
-      }
-
-      this.setColor = function(redCh, greenCh, blueCh){
-        redCh = redCh%255;
-        blueCh = blueCh%255;
-        this.color = 'rgb('+redCh+','+greenCh+','+blueCh+')';
+        
+        if(this.speedXdir==1 && this.speedYdir==1 ){
+          this.element.style.backgroundImage = 'url(imgs/ant11.gif)';
+        }
+        else if(this.speedXdir==1 && this.speedYdir==-1 ){
+          this.element.style.backgroundImage = 'url(imgs/ant1-1.gif)';
+        }
+        else if(this.speedXdir==-1 && this.speedYdir==1 ){
+          this.element.style.backgroundImage = 'url(imgs/ant-11.gif)';
+        }
+        else if(this.speedXdir==-1 && this.speedYdir==-1 ){
+          this.element.style.backgroundImage = 'url(imgs/ant-1-1.gif)';
+        }
       }
   
       this.boxClicked = function () {
-        console.log('boxClicked', this.width);
+        this.move = function(){};
+        this.element.style.backgroundImage = 'none';
+        setTimeout(function(){
+            that.element.remove();
+        }, 100);
+        
       }
   
       this.draw = function () {
         this.element.style.position = 'absolute';
-        this.element.style.backgroundColor = this.color;
+        this.element.style.zIndex = '5';
         this.element.style.left = this.x + 'px';
         this.element.style.top = this.y + 'px';
       }
@@ -70,26 +82,32 @@
         this.draw();
       }
   
-      this.checkCollision = function(boxes, currBoxInd) {
+      this.checkCollision = function(boxes, currBoxInd, maxH, maxW) {
         var flag = 0;
-        if(this.x + this.width >= 500 || this.x <= 0){
-            this.speedXdir = -this.speedXdir;
-            if(this.x<0){
-              this.x=0;
-            }
-            if(this.x+this.width>500){
-              this.x = 500 - this.width;
-            }
+
+        if(this.x + this.width >= maxW || this.x <= 0){
+          this.speedXdir = -this.speedXdir;
+          
+          if(this.x<0){
+            this.x=0;
+          }
+          if(this.x+this.width>maxW){
+            this.x = maxW - this.width;
+          }
+          
         }
-        if(this.y + this.height >= 500 || this.y <= 0){
+        if(this.y + this.height >= maxH || this.y <= 0){
           this.speedYdir = -this.speedYdir;
+
           if(this.y<0){
             this.y=0;
           }
-          if(this.y+this.height>500){
-            this.y = 500 - this.height;
+          if(this.y+this.height>maxH){
+            this.y = maxH - this.height;
           }
+          
         }
+
         var flag = 0;
         for(var j=0; j<boxes.length; ++j){
           if(j != currBoxInd){
@@ -104,7 +122,6 @@
                   boxes[j].speedXdir = -boxes[j].speedXdir;
                   flag = 1;
                 }
-                 
               }
               if(this.y+this.height>=boxes[j].y && this.speedYdir==1 && boxes[j].speedYdir==-1 && wD<this.width
                 ||this.y-this.height<=boxes[j].y && this.speedYdir==-1 && boxes[j].speedYdir==1 && wD<this.width){
@@ -114,12 +131,21 @@
                     flag = 1;
                   }
               }
-              
-            }
-            
+            }  
           }
         }
-        
+        if(this.speedXdir==1 && this.speedYdir==1 ){
+          this.element.style.backgroundImage = 'url(imgs/ant11.gif)';
+        }
+        else if(this.speedXdir==1 && this.speedYdir==-1 ){
+          this.element.style.backgroundImage = 'url(imgs/ant1-1.gif)';
+        }
+        else if(this.speedXdir==-1 && this.speedYdir==1 ){
+          this.element.style.backgroundImage = 'url(imgs/ant-11.gif)';
+        }
+        else if(this.speedXdir==-1 && this.speedYdir==-1 ){
+          this.element.style.backgroundImage = 'url(imgs/ant-1-1.gif)';
+        }
       }
     }
     
@@ -129,23 +155,23 @@
   
     function Collision(parentElement, boxCount) {
       var boxes = [];
-      var MAX_WIDTH = 500;
-      var MAX_HEIGHT = 500;
+      var MAX_WIDTH = parentElement.getBoundingClientRect().width;
+      var MAX_HEIGHT = parentElement.getBoundingClientRect().height;
       this.parentElement = parentElement;
-      this.boxCount = boxCount || 20;
+      this.boxCount = boxCount || 10;
   
       this.startCollision = function() {
         for(var i=0; i < this.boxCount; i++) {
           var box = new Box(parentElement).init();
           box.setPostion(
-            getRandomArbitrary(0, MAX_WIDTH-20),
-            getRandomArbitrary(0, MAX_HEIGHT-20)
+            getRandomArbitrary(0, MAX_WIDTH-box.width),
+            getRandomArbitrary(0, MAX_HEIGHT-box.height)
           )
           for(var j=0; j<i; j++){
             if(Math.abs(box.x-boxes[j].x)<=box.width && Math.abs(box.y-boxes[j].y)<=box.height){
               box.setPostion(
-                getRandomArbitrary(0, MAX_WIDTH-20),
-                getRandomArbitrary(0, MAX_HEIGHT-20)
+                getRandomArbitrary(0, MAX_WIDTH-box.width),
+                getRandomArbitrary(0, MAX_HEIGHT-box.height)
               )
               j=0;
             }
@@ -154,29 +180,22 @@
             getRandomArbitrary(-1, 1),
             getRandomArbitrary(-1, 1)
           )
-          box.setColor(
-            getRandomArbitrary(0, 255),
-            getRandomArbitrary(0, 255),
-            getRandomArbitrary(0, 255)
-          )
           box.draw();
           boxes.push(box);
         }
   
-        setInterval(this.moveBoxes.bind(this), 10);
+        setInterval(this.moveBoxes.bind(this), 30);
       }
   
       this.moveBoxes = function() {
         for(var i=0; i< this.boxCount; i++) {
           boxes[i].move();
-          boxes[i].checkCollision(boxes, i)
+          boxes[i].checkCollision(boxes, i, MAX_HEIGHT, MAX_WIDTH)
         }
       }
     }
   
-    var parentBox = document.getElementById('main-container');
+    var parentBox = document.getElementById('ant-container');
   
     new Collision(parentBox).startCollision();
   })();
-
-
