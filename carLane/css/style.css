@@ -1,7 +1,7 @@
 #lane-container {
     position: relative;
     width: 430px;
-    height: 840px;
+    height: 800px;
     background-image: url(../images/roadPitch.png);
     overflow: hidden;
 }
