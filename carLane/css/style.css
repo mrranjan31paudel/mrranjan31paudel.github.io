@@ -1,0 +1,23 @@
+#lane-container {
+    position: relative;
+    width: 430px;
+    height: 840px;
+    background-image: url(../images/roadPitch.png);
+    overflow: hidden;
+}
+
+.road-dec {
+    position: absolute;
+    z-index: 5;
+    
+}
+/* .car {
+    position: absolute;
+    left: 289px;
+    bottom: 20px;
+    z-index: 10;
+    width: 65px;
+    height: 135px;
+    background-color: rgb(71, 172, 255);
+    border-radius: 20px;
+} */
