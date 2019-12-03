@@ -79,14 +79,12 @@
               }
             }
           }
-          setTimeout(function(){
             for(var i=0; i<cars.length; i++){
               cars[i].element.remove();
             }
             
-            this.element.remove();
-            
-          }, 500)
+          
+          this.element.remove();
           startScreen.style.display = 'block';
             startButton.style.display = 'block';
           
