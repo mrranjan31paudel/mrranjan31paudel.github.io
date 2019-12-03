@@ -64,15 +64,15 @@
     this.collisionDetection = function(cars, gameLoop){
       for(var i=0; i<cars.length; i++){
         if(cars[i].posX==this.posX && cars[i].posY+cars[i].height >= this.posY && cars[i].posY+cars[i].height<this.posY+this.height){
-          cars[i].carImg.src = 'images/blast.png';
-          this.carImg.src = 'images/blast.png';
+          cars[i].carImg.src = 'images/blasted.png';
+          this.carImg.src = 'images/blasted.png';
           clearInterval(gameLoop);
         }     
         else{
           for(var j=0; j<this.bulletArr.length; j++){
             if(cars[i].posX+25==this.bulletPosX[j] && cars[i].posY+cars[i].height>=this.bulletPosY[j] && cars[i]!=undefined){
               console.log('bang!!')
-              cars[i].carImg.src = 'images/blast.png';
+              cars[i].carImg.src = 'images/blasted.png';
 
               bulletTemp = this.bulletArr[j];
               bulletXpos = this.bulletPosX[j];
