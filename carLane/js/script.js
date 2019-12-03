@@ -63,17 +63,40 @@
     }
     this.collisionDetection = function(cars, gameLoop){
       for(var i=0; i<cars.length; i++){
-        if(cars[i].posX==this.posX && cars[i].posY+cars[i].height >= this.posY && cars[i].posY+cars[i].height<this.posY+this.height){
+        var oppZin = cars[i].element.style.zIndex;
+        var playerZin = this.element.style.zIndex;
+        if(cars[i].posX==this.posX && cars[i].posY+cars[i].height >= this.posY && cars[i].posY+cars[i].height<this.posY+this.height && oppZin==playerZin){
           cars[i].carImg.src = 'images/blasted.png';
           this.carImg.src = 'images/blasted.png';
+          
+          
           clearInterval(gameLoop);
+          if(this.bulletArr.length>0){
+            
+            for(var i=0; i<this.bulletArr.length; i++){
+              if(this.bulletArr[i]!=undefined){
+                this.bulletArr[i].remove();
+              }
+            }
+          }
+          setTimeout(function(){
+            for(var i=0; i<cars.length; i++){
+              cars[i].element.remove();
+            }
+            
+            this.element.remove();
+            
+          }, 500)
+          startScreen.style.display = 'block';
+            startButton.style.display = 'block';
+          
         }     
         else{
           for(var j=0; j<this.bulletArr.length; j++){
-            if(cars[i].posX+25==this.bulletPosX[j] && cars[i].posY+cars[i].height>=this.bulletPosY[j] && cars[i]!=undefined){
+            if(cars[i].posX+25==this.bulletPosX[j] && cars[i].posY+cars[i].height>=this.bulletPosY[j] && cars[i]!=undefined && oppZin==this.bulletArr[j].style.zIndex){
               console.log('bang!!')
               cars[i].carImg.src = 'images/blasted.png';
-
+              cars[i].element.style.zIndex = 25;
               bulletTemp = this.bulletArr[j];
               bulletXpos = this.bulletPosX[j];
               bulletYpos = this.bulletPosY[j];
@@ -93,6 +116,7 @@
               shiftedBullet = this.bulletArr.shift();
               // lostCar.element.remove();
               shiftedBullet.remove();
+              
               break;
             }
           }
@@ -190,7 +214,6 @@
           laneFlag[carOpp.flagHolder]=1;
           for(var i=0; i<cars.length; i++){
             if(cars[i].posY>=800){
-              // laneFlag[cars[i].flagHolder] = 0;
               lostCar = cars.shift();
               lostCar.element.remove();
             }
@@ -258,7 +281,34 @@
   var roadLane = document.getElementsByClassName('road-dec');
   var startScreen = document.createElement('div');
   parentRoad.appendChild(startScreen);
-  
-  new Game(parentRoad, roadLane).startGame();
+  startScreen.setAttribute('id', 'startScreen');
+  startScreen.style.position = 'absolute';
+  startScreen.style.zIndex = 20;
+  startScreen.style.top = '0px';
+  startScreen.style.left = '0px';
+  startScreen.style.height = '800px';
+  startScreen.style.width = '430px';
+  startScreen.style.backgroundColor = 'rgba(255, 115, 0, 0.616)';
 
+  var startButton = document.createElement('button');
+  startButton.setAttribute('id', 'startButton');
+  startButton.innerHTML = 'START';
+  startButton.style.backgroundColor = 'orange';
+  startButton.style.color = 'white';
+  startButton.style.height = '40px';
+  startButton.style.width = '300px';
+  startButton.style.border = '0px';
+  startButton.style.fontSize = '25px';
+  startButton.style.borderRadius = '25px';
+  startButton.style.position = 'absolute';
+  startButton.style.zIndex = 25;
+  startButton.style.left = '65px';
+  startButton.style.top = '380px'
+  startButton.onclick = function(){
+    startScreen.style.display = 'none';
+    startButton.style.display = 'none';
+    
+    new Game(parentRoad, roadLane).startGame();
+  };
+  parentRoad.appendChild(startButton);
 })();
