@@ -70,16 +70,9 @@
         }     
         else{
           for(var j=0; j<this.bulletArr.length; j++){
-            // console.log(cars[i].posX)
             if(cars[i].posX+25==this.bulletPosX[j] && cars[i].posY+cars[i].height>=this.bulletPosY[j] && cars[i]!=undefined){
               console.log('bang!!')
-              // carTemp = cars[i];
-              // cars[i]=cars[0];
-              // cars[0]=carTemp;
-              // 
-              //lostCar = cars.shift();
               cars[i].carImg.src = 'images/blast.png';
-              // 
 
               bulletTemp = this.bulletArr[j];
               bulletXpos = this.bulletPosX[j];
@@ -263,6 +256,8 @@
 
   var parentRoad = document.getElementById('lane-container');
   var roadLane = document.getElementsByClassName('road-dec');
+  var startScreen = document.createElement('div');
+  parentRoad.appendChild(startScreen);
   
   new Game(parentRoad, roadLane).startGame();
 
