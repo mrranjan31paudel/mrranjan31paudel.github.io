@@ -1,0 +1,26 @@
+#flappy-bird-container {
+    height: 600px;
+    width: 700px;
+    position: relative;
+    overflow: hidden;
+}
+
+#far-background {
+    height: 500px;
+    width: 900px;
+    position: absolute;
+    z-index: 5;
+    left: 0px;
+    top: 0px;
+    background-image: url(../images/backgroundImg.png);
+}
+
+#near-background {
+    height: 100px;
+    width: 900px;
+    position: absolute;
+    z-index: 15;
+    /* left: 0px;*/
+    top: 500px;
+    background-image: url(../images/pipeplatform.png);
+}
