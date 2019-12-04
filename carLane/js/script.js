@@ -86,7 +86,7 @@
           
           this.element.remove();
           startScreen.style.display = 'block';
-            startButton.style.display = 'block';
+          startButton.style.display = 'block';
           
         }     
         else{
