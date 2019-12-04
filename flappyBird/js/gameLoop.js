@@ -289,7 +289,7 @@
     nearBackground.style.top = '500px';
     nearBackground.style.left = '0px';
     nearBackground.style.zIndex = 15;
-    nearBackground.style.backgroundImage = 'url(images/pipePlatform.png)';
+    nearBackground.style.backgroundImage = 'url(images/nearBack.png)';
 
     scoreBoard.setAttribute('class', 'score-board');
     scoreBoard.style.position = 'absolute';
