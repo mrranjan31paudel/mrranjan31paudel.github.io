@@ -1,0 +1,6 @@
+.animation-container {
+    height: 700px;
+    width: 800px;
+    background-color: rgb(25, 0, 66);
+    position: relative;
+}
