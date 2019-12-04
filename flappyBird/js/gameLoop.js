@@ -331,6 +331,4 @@
     
     new MainGame(parentElement, farBackground, nearBackground, scoreBoard, scorePlateArr, gameLoop).startGame();
   };
-  
-
 })();

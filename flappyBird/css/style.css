@@ -7,38 +7,3 @@
     position: relative;
     overflow: hidden;
 }
-
-/* #far-background {
-    height: 500px;
-    width: 900px;
-    position: absolute;
-    z-index: 5;
-    left: 0px;
-    top: 0px;
-    background-image: url(../images/backgroundImg.png);
-}
-
-#near-background {
-    height: 100px;
-    width: 900px;
-    position: absolute;
-    z-index: 15;
-    top: 500px;
-    background-image: url(../images/pipeplatform.png);
-}
-
-#start-screen {
-    position: absolute;
-    z-index: 20;
-    top: 0px;
-    left: 0px;
-    height: 600px;
-    width: 700px;
-}
-
-#score-board {
-    position: absolute;
-    left: 296px;
-    top: 150px;
-    z-index: 15;
-} */
