@@ -33,8 +33,19 @@
       this.element.style.top = this.posY+'px';
     }
 
-    this.setColor = function(color){
-      this.element.style.backgroundColor = color;
+    this.setColor = function(colorIndex){
+      var colorTable = ['rgb(255, 255, 118)',
+                       'rgb(250, 250, 109)',
+                       'rgb(255, 255, 104)',
+                       'rgb(252, 252, 98)',
+                       'rgb(252, 252, 90)',
+                       'rgb(252, 252, 81)',
+                       'rgb(252, 252, 69)',
+                       'rgb(248, 248, 56)',
+                       'rgb(248, 248, 45)',
+                       'rgb(248, 248, 36)',
+                       'rgb(248, 248, 24)'];
+      this.element.style.backgroundColor = colorTable[colorIndex];
     }
 
     this.setSize = function(){
@@ -68,10 +79,12 @@
       for(var j=0; j<15; j++){
         newDotOne = new Dot(parentElement).init();
         newDotTwo = new Dot(parentElement).init();
-        newDotOne.setPosition(j*nextPosH, (amplitude*Math.sin(Math.PI/2+j*angleRad)+amplitude)+nextPosV*i);
-        newDotOne.setColor('red');
-        newDotTwo.setPosition(j*nextPosH, (amplitude*Math.cos(j*angleRad)+amplitude)+nextPosV*i);
-        newDotTwo.setColor('yellow');
+
+        newDotOne.setPosition(j*nextPosH, (amplitude*Math.sin(j*angleRad)+amplitude)+nextPosV*i);
+        newDotOne.setColor(i);
+        newDotTwo.setPosition(j*nextPosH, (amplitude*Math.cos(Math.PI/2+j*angleRad)+amplitude)+nextPosV*i);
+        newDotTwo.setColor(i);
+       
         ntwos.push(newDotTwo);
         nones.push(newDotOne);
       }
@@ -97,16 +110,16 @@
            
             newDotsOne[i][j].moveDot();
             newDotsTwo[i][j].moveDot();
-
-            newDotsOne[i][j].width = Math.abs(Math.sin(timeCount-i*12*angleRad))*40;
+            
+            newDotsOne[i][j].width = 40 - ((Math.sin(timeCount-i*12*angleRad-j*12*angleRad)+1)/2)*40;
             newDotsOne[i][j].height = newDotsOne[i][j].width;
             newDotsOne[i][j].Radius = newDotsOne[i][j].width/2;
             newDotsOne[i][j].setSize();
 
-            newDotsTwo[i][14-j].width =Math.abs(Math.cos(Math.PI/2+timeCount-i*12*angleRad))*40;
-            newDotsTwo[i][14-j].height = newDotsTwo[i][j].width;
-            newDotsTwo[i][14-j].Radius = newDotsTwo[i][j].width/2;
-            newDotsTwo[i][14-j].setSize();
+            newDotsTwo[i][j].width =40 - ((Math.cos(Math.PI/2+timeCount-i*12*angleRad-j*12*angleRad)+1)/2)*40;
+            newDotsTwo[i][j].height = newDotsTwo[i][j].width;
+            newDotsTwo[i][j].Radius = newDotsTwo[i][j].width/2;
+            newDotsTwo[i][j].setSize();
 
           }
         }
