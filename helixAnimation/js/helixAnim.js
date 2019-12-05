@@ -98,16 +98,26 @@
             newDotsOne[i][j].moveDot();
             newDotsTwo[i][j].moveDot();
 
+            newDotsOne[i][j].width = Math.abs(Math.sin(timeCount-i*12*angleRad))*40;
+            newDotsOne[i][j].height = newDotsOne[i][j].width;
+            newDotsOne[i][j].Radius = newDotsOne[i][j].width/2;
+            newDotsOne[i][j].setSize();
+
+            newDotsTwo[i][14-j].width =Math.abs(Math.cos(Math.PI/2+timeCount-i*12*angleRad))*40;
+            newDotsTwo[i][14-j].height = newDotsTwo[i][j].width;
+            newDotsTwo[i][14-j].Radius = newDotsTwo[i][j].width/2;
+            newDotsTwo[i][14-j].setSize();
+
           }
         }
         // for(var j=0; j<15; j++){
         //   for(var i=0; i<11; i++){
-        //     newDotsOne[i][j].width = Math.sin(timeCount-j*12*angleRad)*40;
+        //     newDotsOne[i][j].width = Math.abs(Math.sin(timeCount-i*12*angleRad))*40;
         //     newDotsOne[i][j].height = newDotsOne[i][j].width;
         //     newDotsOne[i][j].Radius = newDotsOne[i][j].width/2;
         //     newDotsOne[i][j].setSize();
 
-        //     newDotsTwo[i][j].width = Math.cos(Math.PI/2+timeCount-j*12*angleRad)*40;
+        //     newDotsTwo[i][j].width =Math.abs(Math.cos(Math.PI/2+timeCount-i*12*angleRad))*40;
         //     newDotsTwo[i][j].height = newDotsTwo[i][j].width;
         //     newDotsTwo[i][j].Radius = newDotsTwo[i][j].width/2;
         //     newDotsTwo[i][j].setSize();
