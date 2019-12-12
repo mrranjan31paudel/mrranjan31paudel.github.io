@@ -1,3 +1,7 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
 #canvas-container {
     height: 600px;
     width: 1000px;
