@@ -1,4 +1,4 @@
-function Cube(context, positionPoint, cubeHeight, cubeWidth, cubeDepth){
+function Cube(context, positionPoint, cubeHeight, cubeWidth, cubeDepth, cubeColor){
   this.positionPoint = positionPoint;
   this.height = cubeHeight;
   this.width = cubeWidth;
@@ -35,7 +35,7 @@ function Cube(context, positionPoint, cubeHeight, cubeWidth, cubeDepth){
     var varWidth = this.width //- this.positionPoint[2]/this.factor;
     var varHeight = this.height //- this.positionPoint[2]/this.factor;
     var varDepth = this.depth //- this.positionPoint[2]/this.factor;
-
+    // console.log(context);
     context.beginPath();
     context.moveTo(this.point_FLT[0] , this.point_FLT[1]);
     context.lineTo(this.point_DLT[0] , this.point_DLT[1]);
@@ -55,6 +55,7 @@ function Cube(context, positionPoint, cubeHeight, cubeWidth, cubeDepth){
     context.lineTo(this.point_FRB[0] , this.point_FRB[1]);
     // context.moveTo(this.point_centroidX[0], this.point_centroidX[1]);
     // context.lineTo(this.point_centroidX[0]+1, this.point_centroidX[1]+1);
+    context.strokeStyle = cubeColor;
     context.stroke();
     
   }

@@ -1,5 +1,37 @@
 ;(function(){
 
+  function DrawingCanvas(parentContainer){
+    this.height = 600;
+    this.width = 1090;
+
+    this.parentContainer = parentContainer;
+
+    this.init = function(){
+      var drawingCanvas = document.createElement('canvas');
+      drawingCanvas.height = this.height;
+      drawingCanvas.width = this.width;
+      drawingCanvas.classList.add('drawing-canvas');
+      this.parentContainer.appendChild(drawingCanvas);
+      this.element = drawingCanvas;
+
+      drawingCanvas.addEventListener('click', this.dropShape.bind(this));
+
+      return this;
+    }
+
+    this.dropShape = function(){
+      var xpos = event.clientX;
+      var ypos = event.clientY;
+      var pos = [xpos, ypos, 0]
+      
+      if(shapeId==0){
+        var cube = new Cube(canvasContext, pos, 100, 100, 100, colorTable[colorId]);
+        cube.drawCube();
+        shapeId=null;
+      }
+    }
+  }
+
   function ShapeButton(parentContainer){
     this.height = 50;
     this.width = 50;
@@ -16,7 +48,6 @@
       shapeButton.style.margin = '10px';
       shapeButton.style.border = '1px solid rgb(205, 205, 205)';
       shapeButton.style.borderRadius = '5px';
-      // shapeButton.style.display = 'table-column';
       shapeButton.classList.add('shape-button');
       this.parentContainer.appendChild(shapeButton);
       shapeButton.addEventListener('click', this.shapeSelector.bind(this));
@@ -45,8 +76,6 @@
     }
   }
 
-  
-
   function ColorButton(parentContainer) {
     this.height = 32;
     this.width = 32;
@@ -68,8 +97,6 @@
 
       colorButton.addEventListener('click', this.colorSelector.bind(this));
 
-      colorId = 14;
-
       return this;
     }
 
@@ -90,10 +117,11 @@
     }
   }
 
-  function MainDesign(drawingCanvasContainer, drawingCanvas, shapeContainer, colorContainer, colorPalette){
+  function MainDesign(drawingCanvasContainer, shapeContainer, colorContainer, colorPalette){
     this.init = function(){
-      var shapeButtons = [];
-      var colorButtons = [];
+      drawingCanvas = new DrawingCanvas(drawingCanvasContainer).init();
+      canvasContext = drawingCanvas.element.getContext('2d');
+      colorId = 14;
       for(var i=0; i<4; i++){
         var newButton = new ShapeButton(shapeContainer).init();
         newButton.iconImg = i;
@@ -112,11 +140,15 @@
   }
 
   var drawingCanvasContainer = document.getElementById('drawing-canvas-container');
-  var drawingCanvas = document.getElementById('drawing-canvas');
   var shapeContainer = document.getElementById('shape-container');
   var colorContainer = document.getElementById('color-container');
   var colorPalette = document.getElementById('color-palette');
   var selectedColor = document.getElementById('selected-color');
+
+  var drawingCanvas;
+  var canvasContext;
+  var shapeButtons = [];
+  var colorButtons = [];
 
   var shapeId = null;
   var colorId = null;
@@ -125,6 +157,6 @@
                     'orange', 'gold', 'lightyellow', 'yellow', 'lime', 'green',
                     'aqua', 'turquoise', 'blue', 'indigo', 'pink', 'brown'];
 
-  new MainDesign(drawingCanvasContainer, drawingCanvas, shapeContainer, colorContainer, colorPalette).init();
+  new MainDesign(drawingCanvasContainer, shapeContainer, colorContainer, colorPalette).init();
 
 })();
