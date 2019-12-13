@@ -8,12 +8,34 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div id="canvas-container">
-        <canvas class="new-canvas" width="400" height="400">  
+    <div id="main-container">
+        <div id="drawing-canvas-container">
+            <canvas id="drawing-canvas">
 
-        </canvas>
+            </canvas>
+        </div>
+        <div id="sidenav">
+            <div id="shape-container">
+                <div id="shape-text">
+                    3D shapes
+                </div>
+
+            </div>
+            <div id="color-container">
+                <div id="color-text">
+                    Color Palette
+                </div>
+                <div id="color-palette">
+
+                </div>
+                <div id="selected-color">
+                    <span></span>
+                </div>
+            </div>
+        </div>
     </div>
     <script src="js/3dLibrary.js"></script>
-    <script src="js/script.js"></script>
+    <!-- <script src="js/script.js"></script> -->
+    <script src="js/mainUI.js"></script>
 </body>
 </html>
