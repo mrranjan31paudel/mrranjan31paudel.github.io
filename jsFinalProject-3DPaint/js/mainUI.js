@@ -27,6 +27,7 @@
       if(shapeId==0){
         var cube = new Cube(canvasContext, pos, 100, 100, 100, colorTable[colorId]);
         cube.drawCube();
+        shapeButtons[shapeId].element.style.backgroundColor = 'whitesmoke';
         shapeId=null;
       }
     }
@@ -128,6 +129,7 @@
         newButton.placeIcon();
         shapeButtons.push(newButton);
       }
+      
       for(var i=0; i<18; i++){
         var newButton = new ColorButton(colorPalette).init();
         newButton.backgroundColor = colorTable[i];
