@@ -30,6 +30,24 @@
         shapeButtons[shapeId].element.style.backgroundColor = 'whitesmoke';
         shapeId=null;
       }
+      // else if(shapeId==1){
+      //   var sphere = new Sphere(canvasContext, pos, 100, 100, 100, colorTable[colorId]);
+      //   sphere.drawSphere();
+      //   shapeButtons[shapeId].element.style.backgroundColor = 'whitesmoke';
+      //   shapeId=null;
+      // }
+      // else if(shapeId==2){
+      //   var cylinder = new Cylinder(canvasContext, pos, 100, 100, 100, colorTable[colorId]);
+      //   cylinder.drawCylinder();
+      //   shapeButtons[shapeId].element.style.backgroundColor = 'whitesmoke';
+      //   shapeId=null;
+      // }
+      // else if(shapeId==3){
+      //   var cone = new Cone(canvasContext, pos, 100, 100, 100, colorTable[colorId]);
+      //   cone.drawCone();
+      //   shapeButtons[shapeId].element.style.backgroundColor = 'whitesmoke';
+      //   shapeId=null;
+      // }
     }
   }
 
