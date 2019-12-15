@@ -12,6 +12,7 @@
         width: 80%;
         height: 600px;
         float: left;
+        position: relative;
         background-color: rgb(221, 221, 221);
     }
 
