@@ -916,8 +916,8 @@ function Cube(context, positionPoint, cubeHeight, cubeWidth, cubeDepth, cubeColo
     this.axisCangXY = Math.asin(Math.abs(this.point_DLT[2]-this.point_FLT[2])/axisCmag);
   }
 // ****************************************************************Rotate 
-  this.rotateShape = function(butId, radAngle){
-    
+  this.rotateShape = function(butId, degAngle){
+    var radAngle = degAngle*Math.PI/180;
     var pi = Math.PI;
 
     var sinShift = Math.sin(radAngle);
@@ -989,8 +989,8 @@ function Cube(context, positionPoint, cubeHeight, cubeWidth, cubeDepth, cubeColo
   // }
 
 // ****************************************************************Move or shift
-  this.moveCube = function(xShift, yShift){
-    // context.clearRect(0, 0 , 400, 400);
+  this.moveShape = function(xShift, yShift){
+    
     this.point_FLT = [this.point_FLT[0] + xShift, this.point_FLT[1] + yShift, this.point_FLT[2]];
     this.point_FRT = [this.point_FRT[0] + xShift, this.point_FRT[1] + yShift, this.point_FRT[2]];
     this.point_FLB = [this.point_FLB[0] + xShift, this.point_FLB[1] + yShift, this.point_FLB[2]];
@@ -999,7 +999,7 @@ function Cube(context, positionPoint, cubeHeight, cubeWidth, cubeDepth, cubeColo
     this.point_DRT = [this.point_DRT[0] + xShift, this.point_DRT[1] + yShift, this.point_DRT[2]];
     this.point_DLB = [this.point_DLB[0] + xShift, this.point_DLB[1] + yShift, this.point_DLB[2]];
     this.point_DRB = [this.point_DRB[0] + xShift, this.point_DRB[1] + yShift, this.point_DRB[2]];
-    this.drawShape();
+    // this.drawShape();
   }
 
 // ***********************************************Resize********

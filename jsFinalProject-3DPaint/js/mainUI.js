@@ -14,21 +14,26 @@
       this.parentContainer.appendChild(drawingCanvas);
       this.element = drawingCanvas;
 
-      drawingCanvas.addEventListener('click', this.dropShape.bind(this));
+      drawingCanvas.addEventListener('click', this.controlShape.bind(this));
+      drawingCanvas.addEventListener('mousedown', this.holdShape.bind(this));
+      drawingCanvas.addEventListener('mousemove', this.moveShapes.bind(this));
+      drawingCanvas.addEventListener('mouseup', this.releaseShape.bind(this));
+      document.addEventListener('keyup', this.deleteShape.bind(this));
 
       return this;
     }
 
-    this.dropShape = function(){
-      var xpos = event.clientX;
-      var ypos = event.clientY;
-      var pos = [xpos, ypos, 0]
+    this.controlShape = function(){
+      onClickPointX = event.clientX;
+      onClickPointY = event.clientY;
+      
+      var pos = [onClickPointX, onClickPointY, 0]
       
       if(shapeId==null){
         for(var i=0; i<drawnShapeList.length; i++){
-          if(drawnShapeList[i].isInside(xpos, ypos)){
+          if(drawnShapeList[i].isInside(onClickPointX, onClickPointY)){
             var selectionRect = drawnShapeList[i].getBoundingRect();
-            
+            shapeControlFlag = i;
             redrawAll();
             shapeOnControl = i;
             selectionBorder.drawSelectionBorder(selectionRect[0], selectionRect[1], selectionRect[2], selectionRect[3]);
@@ -37,6 +42,7 @@
         }
       }
       else{
+        selectionBorder.hideSelectionBorder();
         if(shapeId==0){
           var cube = new Cube(canvasContext, pos, 100, 100, 100, colorTable[colorId]);
           
@@ -63,6 +69,55 @@
         //   shapeButtons[shapeId].element.style.backgroundColor = 'whitesmoke';
         //   shapeId=null;
         // }
+      }
+    }
+
+    this.holdShape = function(){
+      if(shapeControlFlag!=null){
+        shapeHoldFlag = shapeControlFlag; 
+      }
+    }
+
+    this.moveShapes = function(){
+      if(shapeHoldFlag!=null){
+        var xpos = event.clientX;
+        var ypos = event.clientY;
+        var selectionRect = drawnShapeList[shapeHoldFlag].getBoundingRect();
+
+        drawnShapeList[shapeHoldFlag].moveShape(xpos-onClickPointX, ypos-onClickPointY);
+        onClickPointY = ypos;
+        onClickPointX = xpos;
+        selectionBorder.drawSelectionBorder(selectionRect[0], selectionRect[1], selectionRect[2], selectionRect[3]);
+        redrawAll();
+
+      }
+    }
+
+    this.releaseShape = function(){
+      if(shapeControlFlag!=null){
+        shapeHoldFlag=null;
+      } 
+    }
+
+    this.deleteShape = function(){
+      var pressedKey = event.key;
+      
+      if(pressedKey == 'Delete' && shapeControlFlag!=null){
+
+        var selectionRect = drawnShapeList[shapeControlFlag].getBoundingRect();
+        canvasContext.clearRect(selectionRect[0], selectionRect[1], selectionRect[2], selectionRect[3]);
+
+        selectionBorder.hideSelectionBorder();
+
+        var tempShape = drawnShapeList[0];
+        drawnShapeList[0] = drawnShapeList[shapeControlFlag];
+        drawnShapeList[shapeControlFlag] = tempShape;
+        drawnShapeList.shift();
+
+        shapeControlFlag=null
+        shapeHoldFlag=null;
+
+        redrawAll();
       }
     }
   }
@@ -157,6 +212,7 @@
     this.width = 10;
     this.butId = 0;
     this.parentContainer = parentContainer;
+    this.holdFlag = 0;
 
     this.init = function(){
       var stretchButton = document.createElement('button');
@@ -170,17 +226,51 @@
 
       this.parentContainer.appendChild(stretchButton);
 
-      stretchButton.addEventListener('click', this.pressButton.bind(this));
+      stretchButton.addEventListener('mousedown', this.holdStretchButton.bind(this));
+      document.addEventListener('mousemove', this.dragStretchButton.bind(this));
+      document.addEventListener('mouseup', this.releaseStretchButton.bind(this));
 
       return this;
     }
-    this.pressButton = function(){
+
+    this.holdStretchButton = function(){
+      if(this.holdFlag==0){
+        onClickPointX = event.clientX;
+        onClickPointY = event.clientY;  
+      }
+      this.holdFlag = 1;
       
-      drawnShapeList[shapeOnControl].stretchShape(this.butId, 1);
-      redrawAll();
-      var selectionRect = drawnShapeList[shapeOnControl].getBoundingRect();
-      selectionBorder.drawSelectionBorder(selectionRect[0], selectionRect[1], selectionRect[2], selectionRect[3]);
+    }
+
+    this.dragStretchButton = function(){
       
+      if(this.holdFlag==1){
+        
+        var xpos = event.clientX; 
+        var ypos = event.clientY;
+
+        if(this.butId==1){
+          drawnShapeList[shapeOnControl].stretchShape(this.butId, -(ypos-onClickPointY));
+        }
+        else if(this.butId==2){
+          drawnShapeList[shapeOnControl].stretchShape(this.butId, (xpos-onClickPointX));
+        }
+        else if(this.butId==3){
+          drawnShapeList[shapeOnControl].stretchShape(this.butId, (ypos-onClickPointY));
+        }
+        else if(this.butId==4){
+          drawnShapeList[shapeOnControl].stretchShape(this.butId, -(xpos-onClickPointX));
+        }
+        onClickPointX = xpos;
+        onClickPointY = ypos;
+        var selectionRect = drawnShapeList[shapeOnControl].getBoundingRect();
+        redrawAll();
+        selectionBorder.drawSelectionBorder(selectionRect[0], selectionRect[1], selectionRect[2], selectionRect[3]);
+      }
+    }
+
+    this.releaseStretchButton = function(){
+      this.holdFlag = 0;
     }
   }
 
@@ -188,6 +278,7 @@
     this.height = 20;
     this.width = 20;
     this.butId = 0;
+    this.holdFlag = 0;
     this.parentContainer = parentContainer;
 
     this.init = function(){
@@ -201,19 +292,57 @@
       this.element = rotateButton;
       this.parentContainer.appendChild(rotateButton);
 
-      rotateButton.addEventListener('click', this.pressButton.bind(this));
+      rotateButton.addEventListener('mousedown', this.holdRotateButton.bind(this));
+      document.addEventListener('mousemove', this.dragRotateButton.bind(this));
+      document.addEventListener('mouseup', this.releaseRotateButton.bind(this));
 
       return this;
     }
-
-    this.pressButton = function(){
-      console.log(this.butId);
-      drawnShapeList[shapeOnControl].rotateShape(this.butId, 0.01745);
-      redrawAll();
-      var selectionRect = drawnShapeList[shapeOnControl].getBoundingRect();
-      selectionBorder.drawSelectionBorder(selectionRect[0], selectionRect[1], selectionRect[2], selectionRect[3]);
+    this.holdRotateButton = function(){
+      if(this.holdFlag==0){
+        onClickPointX = event.clientX;
+        onClickPointY = event.clientY;  
+      }
+      this.holdFlag = 1;
       
     }
+
+    this.dragRotateButton = function(){
+      
+      if(this.holdFlag==1){
+        
+        var xpos = event.clientX; 
+        var ypos = event.clientY;
+
+        if(this.butId==1){
+          drawnShapeList[shapeOnControl].rotateShape(this.butId, (xpos-onClickPointX));
+        }
+        else if(this.butId==2){
+          drawnShapeList[shapeOnControl].rotateShape(this.butId, (ypos-onClickPointY));
+        }
+        else if(this.butId==3){
+          drawnShapeList[shapeOnControl].rotateShape(this.butId, -(xpos-onClickPointX));
+        }
+        
+        onClickPointX = xpos;
+        onClickPointY = ypos;
+        var selectionRect = drawnShapeList[shapeOnControl].getBoundingRect();
+        redrawAll();
+        selectionBorder.drawSelectionBorder(selectionRect[0], selectionRect[1], selectionRect[2], selectionRect[3]);
+      }
+    }
+
+    this.releaseRotateButton = function(){
+      this.holdFlag = 0;
+    }
+    // this.pressButton = function(){
+    //   console.log(this.butId);
+    //   drawnShapeList[shapeOnControl].rotateShape(this.butId, 0.01745);
+    //   redrawAll();
+    //   var selectionRect = drawnShapeList[shapeOnControl].getBoundingRect();
+    //   selectionBorder.drawSelectionBorder(selectionRect[0], selectionRect[1], selectionRect[2], selectionRect[3]);
+      
+    // }
   }
 
   function SelectionBorder(){
@@ -239,8 +368,6 @@
       canvasContext.lineTo(this.left+this.width/2, this.top+this.height+20);
       canvasContext.stroke();
 
-      // canvasContext.strokeStyle = canvasContext.setLineDash([5]);
-      // canvasContext.fillStyle = 'white';
       for(var i=0; i<3; i+=2){
         stretchButtons[i].element.style.display = 'block';
         stretchButtons[i].element.style.left = this.left+this.width/2-5+'px';
@@ -266,7 +393,15 @@
         rotateButtons[i].element.style.top = this.top+this.height*i/2+rotYpos+'px';
         rotYpos += 30;
       }
+    }
 
+    this.hideSelectionBorder = function(){
+      for(var i=0; i<4; i++){
+        stretchButtons[i].element.style.display = 'none';        
+      }
+      for(var i=0; i<3; i++){
+        rotateButtons[i].element.style.display = 'none';
+      }
     }
   }
 
@@ -322,6 +457,10 @@
   var canvasContext;
   var selectionBorder;
   var shapeOnControl;
+
+  var onClickPointX = 0;
+  var onClickPointY = 0;
+
   var shapeButtons = [];
   var colorButtons = [];
   var stretchButtons = [];
@@ -331,6 +470,8 @@
 
   var shapeId = null;
   var colorId = null;
+  var shapeControlFlag = null;
+  var shapeHoldFlag = null;
   
   var colorTable = ['white', 'lightgray', 'darkgray', 'black', 'darkred', 'red',
                     'orange', 'gold', 'lightyellow', 'yellow', 'lime', 'green',
