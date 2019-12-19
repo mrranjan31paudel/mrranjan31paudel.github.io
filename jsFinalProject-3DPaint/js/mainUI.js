@@ -51,12 +51,14 @@
           redrawAll();
           shapeId=null;
         }
-        // else if(shapeId==1){
-        //   var sphere = new Sphere(canvasContext, pos, 100, 100, 100, colorTable[colorId]);
-        //   sphere.drawSphere();
-        //   shapeButtons[shapeId].element.style.backgroundColor = 'whitesmoke';
-        //   shapeId=null;
-        // }
+        else if(shapeId==1){
+          var center = [pos[0], pos[1], pos[2]+50];
+          var sphere = new Sphere(canvasContext, center, 100, colorTable[colorId]);
+          drawnShapeList.push(sphere);
+          shapeButtons[shapeId].element.style.backgroundColor = 'whitesmoke';
+          redrawAll();
+          shapeId=null;
+        }
         // else if(shapeId==2){
         //   var cylinder = new Cylinder(canvasContext, pos, 100, 100, 100, colorTable[colorId]);
         //   cylinder.drawCylinder();
