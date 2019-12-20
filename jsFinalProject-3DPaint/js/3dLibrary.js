@@ -1047,7 +1047,7 @@ function Sphere(context, centerPoint, radius, sphereColor){
         }
         else if(axisXang>=ang45 && this.axisX[0][1]>this.axisX[1][1]){
           unitVectorX = [ -unitVectorX[0], -unitVectorX[1], -unitVectorX[2] ];
-          this.stretchUpdate(this.axisX[0], unitVectorX, shiftFactorX, this.radiusA, 4, 2, 4); 
+          this.stretchUpdate(this.axisX[0], unitVectorX, shiftFactorX, this.radiusA, 2, 4, 4); 
         }
         else if(axisZang>=ang45 && this.axisZ[1][1]>this.axisZ[0][1]){
           this.stretchUpdate(this.axisZ[1], unitVectorZ, shiftFactorZ, this.radiusC, 4, 4, 2);
@@ -1068,61 +1068,119 @@ function Sphere(context, centerPoint, radius, sphereColor){
         }
 
         else if(axisZang>=ang45 && this.axisX[0][0]>this.axisX[1][0]){
-          this.stretchUpdate(this.axisZ[0], unitVectorZ, shiftFactorZ, this.radiusC, 4, 4, 2);
+          this.stretchUpdate(this.axisX[1], unitVectorX, shiftFactorX, this.radiusA, 2, 4, 4);
         }
         else if(axisZang>=ang45 && this.axisX[1][0]>this.axisX[0][0]){
-          unitVectorY = [ -unitVectorY[0], -unitVectorY[1], -unitVectorY[2] ];
-            
+          unitVectorX = [ -unitVectorX[0], -unitVectorX[1], -unitVectorX[2] ];
+          this.stretchUpdate(this.axisX[0], unitVectorX, shiftFactorX, this.radiusA, 2, 4, 4); 
         }
       }
       else if(butId==3){
-        if(axisYang>=ang45 && this.axisY[0][1]>this.axisY[1][1]){
-           
+        if(axisXang>=ang45 && this.axisX[1][1]>this.axisX[0][1]){
+          unitVectorX = [ -unitVectorX[0], -unitVectorX[1], -unitVectorX[2] ];
+          this.stretchUpdate(this.axisX[0], unitVectorX, shiftFactorX, this.radiusA, 2, 4, 4); 
         }
-        else if(axisYang>=ang45 && this.axisY[1][1]>this.axisY[0][1]){
-          unitVectorY = [ -unitVectorY[0], -unitVectorY[1], -unitVectorY[2] ];
-
-        }
-        else if(axisZang>=ang45 && this.axisZ[0][1]>this.axisZ[1][1]){
-          
+        else if(axisXang>=ang45 && this.axisX[0][1]>this.axisX[1][1]){
+          this.stretchUpdate(this.axisX[1], unitVectorX, shiftFactorX, this.radiusA, 2, 4, 4); 
         }
         else if(axisZang>=ang45 && this.axisZ[1][1]>this.axisZ[0][1]){
           unitVectorZ = [ -unitVectorZ[0], -unitVectorZ[1], -unitVectorZ[2] ];
-      
+          this.stretchUpdate(this.axisZ[0], unitVectorZ, shiftFactorZ, this.radiusC, 4, 4, 2);
+        }
+        else if(axisZang>=ang45 && this.axisZ[0][1]>this.axisZ[1][1]){
+          this.stretchUpdate(this.axisZ[1], unitVectorZ, shiftFactorZ, this.radiusC, 4, 4, 2);
         }
       }
       else if(butId==4){
-        if(axisYang>=ang45 && this.axisZ[1][0]>this.axisZ[0][0]){
-          
-        }
-
-        else if(axisYang>=ang45 && this.axisZ[0][0]>this.axisZ[1][0]){
+        if(axisXang>=ang45 && this.axisZ[0][0]>this.axisZ[1][0]){
           unitVectorZ = [ -unitVectorZ[0], -unitVectorZ[1], -unitVectorZ[2] ];
-          
+          this.stretchUpdate(this.axisZ[0], unitVectorZ, shiftFactorZ, this.radiusC, 4, 4, 2);
         }
 
-        else if(axisZang>=ang45 && this.axisY[1][0]>this.axisY[0][0]){
-          
+        else if(axisXang>=ang45 && this.axisZ[1][0]>this.axisZ[0][0]){
+          this.stretchUpdate(this.axisZ[1], unitVectorZ, shiftFactorZ, this.radiusC, 4, 4, 2);
         }
-        else if(axisZang>=ang45 && this.axisY[0][0]>this.axisY[1][0]){
-          unitVectorY = [ -unitVectorY[0], -unitVectorY[1], -unitVectorY[2] ];
-            
+
+        else if(axisZang>=ang45 && this.axisX[0][0]>this.axisX[1][0]){
+          unitVectorX = [ -unitVectorX[0], -unitVectorX[1], -unitVectorX[2] ];
+          this.stretchUpdate(this.axisX[0], unitVectorX, shiftFactorX, this.radiusA, 2, 4, 4);
+        }
+        else if(axisZang>=ang45 && this.axisX[1][0]>this.axisX[0][0]){
+          
+          this.stretchUpdate(this.axisX[1], unitVectorX, shiftFactorX, this.radiusA, 2, 4, 4); 
         }
       }
     }
 
     else if(Math.abs(this.axisZangXY)>Math.abs(this.axisXangXY) && Math.abs(this.axisZangXY)>Math.abs(this.axisYangXY)){
       if(butId==1){
-
+        if(axisXang>=ang45 && this.axisX[1][1]>this.axisX[0][1]){
+          this.stretchUpdate(this.axisX[1], unitVectorX, shiftFactorX, this.radiusA, 2, 4, 4); 
+        }
+        else if(axisXang>=ang45 && this.axisX[0][1]>this.axisX[1][1]){
+          unitVectorX = [ -unitVectorX[0], -unitVectorX[1], -unitVectorX[2] ];
+          this.stretchUpdate(this.axisX[0], unitVectorX, shiftFactorX, this.radiusA, 2, 4, 4); 
+        }
+        else if(axisYang>=ang45 && this.axisY[1][1]>this.axisY[0][1]){
+          this.stretchUpdate(this.axisY[1], unitVectorY, shiftFactorY, this.radiusB, 4, 2, 4);
+        }
+        else if(axisYang>=ang45 && this.axisY[0][1]>this.axisY[1][1]){
+          unitVectorY = [ -unitVectorY[0], -unitVectorY[1], -unitVectorY[2] ];
+          this.stretchUpdate(this.axisY[0], unitVectorY, shiftFactorY, this.radiusB, 4, 2, 4);
+        }
       }
       else if(butId==2){
+        if(axisXang>=ang45 && this.axisY[0][0]>this.axisY[1][0]){
+          this.stretchUpdate(this.axisY[1], unitVectorY, shiftFactorY, this.radiusB, 4, 2, 4);
+        }
 
+        else if(axisXang>=ang45 && this.axisY[1][0]>this.axisY[0][0]){
+          unitVectorY = [ -unitVectorY[0], -unitVectorY[1], -unitVectorY[2] ];
+          this.stretchUpdate(this.axisY[0], unitVectorY, shiftFactorY, this.radiusB, 4, 2, 4);
+        }
+
+        else if(axisYang>=ang45 && this.axisX[0][0]>this.axisX[1][0]){
+          this.stretchUpdate(this.axisX[1], unitVectorX, shiftFactorX, this.radiusA, 2, 4, 4);
+        }
+        else if(axisYang>=ang45 && this.axisX[1][0]>this.axisX[0][0]){
+          unitVectorX = [ -unitVectorX[0], -unitVectorX[1], -unitVectorX[2] ];
+          this.stretchUpdate(this.axisX[0], unitVectorX, shiftFactorX, this.radiusA, 2, 4, 4); 
+        }
       }
       else if(butId==3){
-
+        if(axisXang>=ang45 && this.axisX[1][1]>this.axisX[0][1]){
+          unitVectorX = [ -unitVectorX[0], -unitVectorX[1], -unitVectorX[2] ];
+          this.stretchUpdate(this.axisX[0], unitVectorX, shiftFactorX, this.radiusA, 2, 4, 4); 
+        }
+        else if(axisXang>=ang45 && this.axisX[0][1]>this.axisX[1][1]){
+          this.stretchUpdate(this.axisX[1], unitVectorX, shiftFactorX, this.radiusA, 2, 4, 4); 
+        }
+        else if(axisYang>=ang45 && this.axisY[1][1]>this.axisY[0][1]){
+          unitVectorY = [ -unitVectorY[0], -unitVectorY[1], -unitVectorY[2] ];
+          this.stretchUpdate(this.axisY[0], unitVectorY, shiftFactorY, this.radiusB, 4, 2, 4);
+        }
+        else if(axisYang>=ang45 && this.axisY[0][1]>this.axisY[1][1]){
+          this.stretchUpdate(this.axisY[1], unitVectorY, shiftFactorY, this.radiusB, 4, 2, 4);
+        }
       }
       else if(butId==4){
-        
+        if(axisXang>=ang45 && this.axisY[0][0]>this.axisY[1][0]){
+          unitVectorY = [ -unitVectorY[0], -unitVectorY[1], -unitVectorY[2] ];
+          this.stretchUpdate(this.axisY[0], unitVectorY, shiftFactorY, this.radiusB, 4, 2, 4);
+        }
+
+        else if(axisXang>=ang45 && this.axisY[1][0]>this.axisY[0][0]){
+          this.stretchUpdate(this.axisY[1], unitVectorY, shiftFactorY, this.radiusB, 4, 2, 4);
+        }
+
+        else if(axisYang>=ang45 && this.axisX[0][0]>this.axisX[1][0]){
+          unitVectorX = [ -unitVectorX[0], -unitVectorX[1], -unitVectorX[2] ];
+          this.stretchUpdate(this.axisX[0], unitVectorX, shiftFactorX, this.radiusA, 2, 4, 4);
+        }
+        else if(axisYang>=ang45 && this.axisX[1][0]>this.axisX[0][0]){
+          
+          this.stretchUpdate(this.axisX[1], unitVectorX, shiftFactorX, this.radiusA, 2, 4, 4); 
+        }
       }
     }
   }
