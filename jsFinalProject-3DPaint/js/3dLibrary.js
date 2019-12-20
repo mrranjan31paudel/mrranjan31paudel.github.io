@@ -728,22 +728,6 @@ function Cube(context, positionPoint, cubeHeight, cubeWidth, cubeDepth, cubeColo
   }
 
 // ***********************************************Resize********
-
-  this.resizeCube = function(){
-    // context.clearRect(0, 0 , 400, 400);
-    var resizeFactor = 40;
-
-    this.point_FLT = [this.point_FLT[0], this.point_FLT[1]-resizeFactor, this.point_FLT[2]+resizeFactor];
-    this.point_FRT = [this.point_FRT[0]+resizeFactor, this.point_FRT[1]-resizeFactor, this.point_FRT[2]+resizeFactor];
-    // this.point_FLB = [this.point_FLB[0]+resizeFactor, this.point_FLB[1]+resizeFactor, this.point_FLB[2]+resizeFactor];
-    this.point_FRB = [this.point_FRB[0]+resizeFactor, this.point_FRB[1], this.point_FRB[2]+resizeFactor];
-    this.point_DLT = [this.point_DLT[0], this.point_DLT[1]-resizeFactor, this.point_DLT[2]+resizeFactor];
-    this.point_DRT = [this.point_DRT[0]+resizeFactor, this.point_DRT[1]-resizeFactor, this.point_DRT[2]+resizeFactor];
-    // this.point_DLB = [this.point_DLB[0]+resizeFactor, this.point_DLB[1]+resizeFactor, this.point_DLB[2]+resizeFactor];
-    this.point_DRB = [this.point_DRB[0]+resizeFactor, this.point_DRB[1], this.point_DRB[2]+resizeFactor];
-
-    this.drawShape();
-  }
 // *************************************************************  
   this.isInside = function(pointX, pointY){
     var countHit = 0;
@@ -896,10 +880,6 @@ function Sphere(context, centerPoint, radius, sphereColor){
         temppointY = sph.radiusB * Math.cos(stackAngle) * Math.sin(sectorAngle);
         temppointZ = sph.radiusC * Math.sin(stackAngle);
 
-        // temppointX = pointX*Math.cos(sph.axisXangXY)-pointY*Math.sin(sph.axisXangXY);
-        // temppointY = pointY*Math.cos(sph.axisYangXY)+pointX*Math.sin(sph.axisYangXY);
-        // temppointZ = pointZ*Math.sin(sph.axisZangXY);
-
         sph.vertices[vertexArrayIndex] = [temppointX, temppointY, temppointZ];
         vertexArrayIndex++;
       }
@@ -911,7 +891,7 @@ function Sphere(context, centerPoint, radius, sphereColor){
     var k1, k2;
     
     context.beginPath();
-    context.strokeStyle = 'white';
+    context.strokeStyle = sphereColor;
     
     for(var i=0; i<this.stackCount; ++i){
       k1 = i*(this.sectorCount+1);
@@ -932,22 +912,6 @@ function Sphere(context, centerPoint, radius, sphereColor){
       }
     }
     context.stroke();
-    context.strokeStyle = 'red';
-    context.beginPath();
-    context.moveTo(this.axisX[0][0], this.axisX[0][1]);
-    context.lineTo(this.axisX[1][0], this.axisX[1][1]);
-    context.stroke();
-    context.strokeStyle = 'yellow';
-    context.beginPath();
-    context.moveTo(this.axisY[0][0], this.axisY[0][1]);
-    context.lineTo(this.axisY[1][0], this.axisY[1][1]);
-    context.stroke();
-    context.strokeStyle = 'green';
-    context.beginPath();
-    context.moveTo(this.axisZ[0][0], this.axisZ[0][1]);
-    context.lineTo(this.axisZ[1][0], this.axisZ[1][1]);
-    context.stroke();
-    context.strokeStyle = sphereColor;
   }
 
   this.stretchShape = function(butId, shift){

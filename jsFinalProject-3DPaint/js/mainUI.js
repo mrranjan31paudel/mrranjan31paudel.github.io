@@ -2,7 +2,7 @@
 
   function DrawingCanvas(parentContainer){
     this.height = 600;
-    this.width = 1090;
+    this.width = 2000;
 
     this.parentContainer = parentContainer;
 
