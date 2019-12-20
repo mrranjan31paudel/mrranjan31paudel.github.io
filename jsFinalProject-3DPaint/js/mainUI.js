@@ -59,18 +59,6 @@
           redrawAll();
           shapeId=null;
         }
-        // else if(shapeId==2){
-        //   var cylinder = new Cylinder(canvasContext, pos, 100, 100, 100, colorTable[colorId]);
-        //   cylinder.drawCylinder();
-        //   shapeButtons[shapeId].element.style.backgroundColor = 'whitesmoke';
-        //   shapeId=null;
-        // }
-        // else if(shapeId==3){
-        //   var cone = new Cone(canvasContext, pos, 100, 100, 100, colorTable[colorId]);
-        //   cone.drawCone();
-        //   shapeButtons[shapeId].element.style.backgroundColor = 'whitesmoke';
-        //   shapeId=null;
-        // }
       }
     }
 
@@ -419,12 +407,14 @@
       drawingCanvas = new DrawingCanvas(drawingCanvasContainer).init();
       canvasContext = drawingCanvas.element.getContext('2d');
       colorId = 14;
-      for(var i=0; i<4; i++){
+      for(var i=0; i<2; i++){
         var newButton = new ShapeButton(shapeContainer).init();
         newButton.iconImg = i;
         newButton.placeIcon();
         shapeButtons.push(newButton);
+      }
 
+      for(var i=0; i<4; i++){
         var newStretchButton = new StretchButton(drawingCanvasContainer).init();
         newStretchButton.butId = i+1;
         stretchButtons.push(newStretchButton);
