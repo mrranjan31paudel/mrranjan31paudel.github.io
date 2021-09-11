@@ -1,59 +1,270 @@
 <!DOCTYPE html>
-    <head>
-        <title>Design Assignment 2: 1A-settings.jpg</title>
-        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="CSS/reset.css">
-        <link rel="stylesheet" type="text/css" href="CSS/layout.css">
-        <link rel="stylesheet" type="text/css" href="CSS/style.css">
-        
-    </head>
-    <body>
-        
-            <div class="wide-header-top">
-                <div class="wrapper-header-top clearfix">
-                    <div class="tollens-logo">
-                        <a href="#tollens-home"><img src="images/tollensLogo.png"></a>
-                    </div>
-                    <div class="header-link-list">
-                        
-                            <li class="link-only">
-                                    <a href="#home">HOME</a>
-                            </li>
-                            <li class="link-only">
-                                    <a href="#about">ABOUT</a>
-                            </li>
-                            <li class="link-only">
-                                <a href="#services">SERVICES</a>
-                            </li>
-                            <li class="dropdown">
-                                <span><img src="images/portDropIcon.png">PORTFOLIO</span>
-                            </li>
-                            <li class="link-only">
-                                <a href="#blog">BLOG</a>
-                            </li>
-                            <li class="link-only">
-                                <a href="#features">FEATURES</a>
-                            </li>
-                            <li class="link-only"> 
-                                <a href="#contacts">CONTACTS</a>
-                            </li>
-                            <li class="search-icon">
-                                <input type="text" placeholder="Search the site">
-                                
-                            </li>
-                        
-                    </div>
+
+<head>
+  <title>Design Assignment 2: 1A-settings.jpg</title>
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="CSS/reset.css">
+  <link rel="stylesheet" type="text/css" href="CSS/layout.css">
+  <link rel="stylesheet" type="text/css" href="CSS/style.css">
+  <link rel="stylesheet" type="text/css" href="CSS/common.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="header-top">
+      <div class="container-wrapper clearfix">
+        <div class="tollens-logo">
+          <a class="blk" href="#tollens-home"><img src="images/tollensLogo.png"></a>
+        </div>
+        <ul class="nav-bar-links">
+          <li>
+            <a href="#home">HOME</a>
+          </li>
+          <li>
+            <a href="#about">ABOUT</a>
+          </li>
+          <li>
+            <a href="#services">SERVICES</a>
+          </li>
+          <li>
+            <a href="#portfolio">
+              <div class="clearfix">
+                <img class="portfolio-drop m-r-5 flt-lt" src="images/portDropIcon.png">
+                <span class="flt-rt">PORTFOLIO</span>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="#blog">BLOG</a>
+          </li>
+          <li>
+            <a href="#features">FEATURES</a>
+          </li>
+          <li>
+            <a href="#contacts">CONTACTS</a>
+          </li>
+          <li class="search-icon">
+            <input class="search-bar" type="text" placeholder="Search the site">
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="header-bottom">
+      <div class="container-wrapper clearfix pos-rel">
+        <div class="flt-lt p-tb-10 font-grey-1">
+          ABOUT US
+        </div>
+        <div class="flt-rt p-tb-10 m-rl-10 font-10 font-grey-1">
+          <span href="#">Home</span>
+          <span class="m-rl-5">/</span>
+          <span href="#">About us</span>
+        </div>
+        <img class="header-bot-arrow" src="./images/topBottomArrow.png" alt="v">
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="content-1">
+      <div class="container-wrapper">
+        <div class="p-tb-25">
+          <h2 class="font-red">
+            Donec faucibus ultricies congue
+          </h2>
+          <p class="p-t-20 font-15 font-grey-1 line-ht-150">
+            Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed
+            ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec Qodio et ante
+            tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam amet orci eget
+            eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna.
+          </p>
+        </div>
+        <div class="p-tb-25">
+          <div class="media-800-block m-r-10">
+            <h3 class="font-grey-1">
+              Why Choose Us?
+            </h3>
+            <ul class="why-choose-us-ul m-l-20 m-t-20 font-14 font-grey-1">
+              <li>Qodio et ante tincidunt</li>
+              <li>Maecenas tempus, tellus eget</li>
+              <li>Donec sodales sagittis</li>
+              <li>Etiam amet orci eget</li>
+              <li>Nam quam nunc, blandit vel</li>
+              <li>Condimentum eli rutem via</li>
+            </ul>
+          </div>
+          <div class="media-800-block m-r-10">
+            <p class="line-ht-180 font-14 font-grey-1">
+              Curabitur quis nisl in leo euismod venenatis eu in diam. Etiam aucto diam pellentesque lectus <a
+                class="vehicula-link" href="#vehicula mattis">vehicula mattis</a>.
+              Nulla ac mass at dolor condimnetum eleifend vitae vitae urna.
+            </p>
+            <div class="m-t-20 m-b-20 font-grey-1">
+              <div class="indicator">
+                <div class="pos-rel">
+                  <div class="indicator-value"><strong>50</strong></div>
+                  <img class="indicator-img" src="./images/Ind50.png" alt="50">
                 </div>
+                <div class="indicator-text"><strong>SUSPENDISSE</strong></div>
+
+              </div>
+              <div class="indicator">
+                <div class="pos-rel">
+                  <div class="indicator-value"><strong>70</strong></div>
+                  <img class="indicator-img" src="./images/Ind70.png" alt="50">
+                </div>
+                <div class="indicator-text"><strong>MAECENAS</strong></div>
+              </div>
+              <div class="indicator">
+                <div class="pos-rel">
+                  <div class="indicator-value"><strong>80</strong></div>
+                  <img class="indicator-img" src="./images/Ind80.png" alt="50">
+                </div>
+                <div class="indicator-text"><strong>ALIQUAM</strong></div>
+              </div>
+              <div class="indicator">
+                <div class="pos-rel">
+                  <div class="indicator-value"><strong>100</strong></div>
+                  <img class="indicator-img" src="./images/Ind100.png" alt="50">
+                </div>
+                <div class="indicator-text"><strong>HABITASSE</strong></div>
+              </div>
             </div>
-            <div class="wide-header-bottom">
-                
+          </div>
+          <div class="media-800-block m-r-10">
+            <h3 class="font-grey-2">
+              What Client's Say?
+            </h3>
+            <div class="pos-rel m-t-10">
+              <p class="message-box font-14 font-grey-2 line-ht-150">
+                <em>Curabitur quis nisl in leo euismod venenatis eu in diam. Etiam aucto diam pellentesque lectus
+                  vehicula
+                  mattis.</em> Nulla ac mass at dolor condimnetum
+              </p>
+              <img class="client-say-arrow" src="./images/chatarrow.png" alt="v">
             </div>
-        <div class="wide-body">
-
+            <div class="p-10 txt-aln-r font-grey-2">
+              John Doe
+            </div>
+          </div>
         </div>
-        <div class="wide-bottom">
+      </div>
+    </div>
 
+    <div class="content-2 pos-rel">
+      <div class="container-wrapper">
+        <div class="p-tb-25">
+          <h1 class="font-grey-2 txt-aln-c">
+            OUR TEAM
+          </h1>
         </div>
+        <div class="p-tb-25">
+          <div class="first-block-rel m-r-15">
+            <div class="first-block">
+              <p class="first-block-para">
+                <em>Curabitur quis nisl in leo euismod venenatis eu in diam. Etiam aucto diam pellentesque lectus
+                  vehicula mattis.
+                </em>Nulla ac mass at dolor condimnetum eleifend vitae vitae urna.
+              </p>
+              <div class="social-sites">
+                <a class="social-site-link" href="#facebook"><img src="images/facebookIcon.png"></a>
+                <a class="social-site-link" href="#twitter"><img src="images/twitterIcon.png"></a>
+                <a class="social-site-link" href="#googleplus"><img src="images/googlePlus.png"></a>
+                <a class="social-site-link" href="#linkedin"><img src="images/linkInIcon.png"></a>
+              </div>
+              <img class="block-img-thumbnail" src="./images/imgthumbnail.png" alt="v">
+              <div class="first-block-button"><a href="#">jhon Doe</a></div>
+            </div>
+          </div>
+          <div class="first-block-rel m-r-15">
+            <div class="first-block">
+              <p class="first-block-para">
+                <em>Curabitur quis nisl in leo euismod venenatis eu in diam. Etiam aucto diam pellentesque lectus
+                  vehicula mattis.
+                </em>Nulla ac mass at dolor condimnetum eleifend vitae vitae urna.
+              </p>
+              <div class="social-sites">
+                <a class="social-site-link" href="#facebook"><img src="images/facebookIcon.png"></a>
+                <a class="social-site-link" href="#twitter"><img src="images/twitterIcon.png"></a>
+                <a class="social-site-link" href="#googleplus"><img src="images/googlePlus.png"></a>
+                <a class="social-site-link" href="#linkedin"><img src="images/linkInIcon.png"></a>
+              </div>
+              <img class="block-img-thumbnail" src="./images/imgthumbnail.png" alt="v">
+              <div class="first-block-button"><a href="#">jhon Doe</a></div>
+            </div>
+          </div>
+          <div class="first-block-rel m-r-15">
+            <div class="first-block">
+              <p class="first-block-para">
+                <em>Curabitur quis nisl in leo euismod venenatis eu in diam. Etiam aucto diam pellentesque lectus
+                  vehicula mattis.
+                </em>Nulla ac mass at dolor condimnetum eleifend vitae vitae urna.
+              </p>
+              <div class="social-sites">
+                <a class="social-site-link" href="#facebook"><img src="images/facebookIcon.png"></a>
+                <a class="social-site-link" href="#twitter"><img src="images/twitterIcon.png"></a>
+                <a class="social-site-link" href="#googleplus"><img src="images/googlePlus.png"></a>
+                <a class="social-site-link" href="#linkedin"><img src="images/linkInIcon.png"></a>
+              </div>
+              <img class="block-img-thumbnail" src="./images/imgthumbnail.png" alt="v">
+              <div class="first-block-button"><a href="#">jhon Doe</a></div>
+            </div>
+          </div>
+          <div class="first-block-rel m-r-15">
+            <div class="first-block">
+              <p class="first-block-para">
+                <em>Curabitur quis nisl in leo euismod venenatis eu in diam. Etiam aucto diam pellentesque lectus
+                  vehicula mattis.
+                </em>Nulla ac mass at dolor condimnetum eleifend vitae vitae urna.
+              </p>
+              <div class="social-sites">
+                <a class="social-site-link" href="#facebook"><img src="images/facebookIcon.png"></a>
+                <a class="social-site-link" href="#twitter"><img src="images/twitterIcon.png"></a>
+                <a class="social-site-link" href="#googleplus"><img src="images/googlePlus.png"></a>
+                <a class="social-site-link" href="#linkedin"><img src="images/linkInIcon.png"></a>
+              </div>
+              <img class="block-img-thumbnail" src="./images/imgthumbnail.png" alt="v">
+              <div class="first-block-button"><a href="#">jhon Doe</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-    </body>
+    <div class="content-3">
+      <div class="container-wrapper">
+        <div class="p-tb-25 txt-aln-c">
+          <h2 class="font-red font-normal">
+            Best Solution is the simplest IDEA!
+          </h2>
+          <p class="p-t-20 font-14 font-grey-1 line-ht-150 p-rl-25">
+            Capacitance cascadin integer reflective interface data development high bus cache dithering transponder.
+            Curabitur vitae velit in neque dictum blandit. Proin in iaculis neque. Pllentesque habitand morbi tristique
+            senectus et netus et malesuada fames ac turpis egestas.
+          </p>
+        </div>
+        <div class="p-tb-25">
+          <div class="slider-container inl-blk">
+            <div class="slider-text font-grey-2">
+              <span class="blk p-tb-10 p-r-20">Our Happy Clients</span>
+            </div>
+            <div class="m-t-20">
+              <hr>
+            </div>
+          </div>
+          <div class="slide-button inl-blk">
+            <div class="slide-button-left inl-blk m-r-10"></div>
+            <div class="slide-button-right inl-blk"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="wide-bottom">
+
+  </div>
+
+</body>
+
 </html>
