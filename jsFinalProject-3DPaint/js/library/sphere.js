@@ -4,8 +4,8 @@ function Sphere(context, centerPoint, radius, sphereColor) {
   this.radiusB = radius; //For ellipsoid
   this.radiusC = radius;
 
-  this.stackCount = 18;
-  this.sectorCount = 54;
+  this.stackCount = 24;
+  this.sectorCount = 72;
 
   this.boundingRect = [];
 
@@ -61,6 +61,7 @@ function Sphere(context, centerPoint, radius, sphereColor) {
 
     context.beginPath();
     context.strokeStyle = sphereColor;
+    // context.fillStyle = sphereColor;
 
     for (var i = 0; i < this.stackCount; ++i) {
       k1 = i * (this.sectorCount + 1);

@@ -1,0 +1,417 @@
+.container {
+  width: 100%;
+}
+
+.header-top {
+  width: 100%;
+  background-color: rgb(118, 199, 193);
+  background-image: url(../images/topBackPattern.png);
+  background-position: bottom;
+  background-repeat: repeat-x;
+}
+
+.container-wrapper {
+  width: 75%;
+  margin: 0px auto;
+  padding: 20px 0px;
+}
+
+.tollens-logo {
+  margin-bottom: 20px;
+}
+
+.nav-bar-links {
+  list-style-type: none;
+}
+
+.nav-bar-links li {
+  height: 100%;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.nav-bar-links li:hover {
+  background-image: url(../images/headerLinkBack.png);
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.nav-bar-links li:last-child {
+  height: 32px;
+  width: 32px;
+  padding: 0px;
+  background-image: url(../images/searchIcon.png);
+  background-repeat: no-repeat;
+  border-radius: 5px;
+}
+
+.nav-bar-links li:last-child:hover {
+  background-image: url(../images/searchIconClicked.png);
+  cursor: pointer;
+}
+
+.nav-bar-links li a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  font-size: 12px;
+  padding: 5px;
+  font-weight: 600;
+}
+
+.search-icon {
+  position: relative;
+  margin-left: 10px;
+}
+
+.search-bar {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0px;
+  z-index: 1000;
+  padding: 2px;
+  border: 2px solid red;
+  border-radius: 5px;
+}
+
+.search-icon:hover .search-bar {
+  display: block;
+}
+
+.portfolio-drop {
+  height: 12px;
+}
+
+.header-bottom {
+  width: 100%;
+  background-color: rgb(237, 237, 237);
+}
+
+.header-bot-arrow {
+  position: absolute;
+  top: calc(100% - 1px);
+  left: -12px;
+  z-index: 1000px;
+}
+
+.content-1 {
+  background-color: rgb(247, 247, 247);
+  background-image: url(../images/bodyscalepattern1.png);
+  background-repeat: repeat-x;
+  background-position: bottom;
+}
+
+.media-800-block {
+  width: calc(25% - 10px);
+  display: inline-block;
+  vertical-align: top;
+}
+
+.media-800-block:nth-child(2) {
+  width: calc(50% - 20px);
+}
+
+.why-choose-us-ul {
+  list-style-image: url(../images/arrowBullet.png);
+  line-height: 1.8;
+}
+
+.message-box {
+  margin: 10px 0px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: white;
+}
+
+.client-say-arrow {
+  position: absolute;
+  top: calc(100% - 5px);
+  left: 10px;
+}
+
+.vehicula-link {
+  color: red;
+  text-decoration: underline;
+}
+
+.vehicula-link:hover {
+  text-decoration: none;
+}
+
+.indicator {
+  width: calc(24% - 10px);
+  padding: 5px;
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+}
+
+.indicator-value {
+  display: inline-block;
+  vertical-align: bottom;
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  font-size: calc(1em + 5px);
+}
+
+.indicator-img {
+  width: 100%;
+}
+
+.indicator-text {
+  font-size: 1em;
+  padding: 5px;
+}
+
+.content-2 {
+  background-color: rgb(237, 237, 237);
+  background-image: url(../images/bodybot1.png);
+  background-repeat: repeat-x;
+  background-position: bottom;
+}
+
+.first-block-rel{
+  height: 340px;
+  width: calc(25% - 35px);
+  display: inline-block;
+  vertical-align: top;
+  margin: 15px;
+}
+
+.first-block-rel:hover .first-block{ 
+  background-color: #90d1cb;
+  box-shadow: 0px 5px 0px 0px #79c3bd;
+  cursor: pointer; 
+}
+
+.first-block-rel:hover .first-block-button a{
+  background-color: #e9645b;
+  box-shadow: 0px 5px 0px 0px #e25051;
+  cursor: pointer;
+}
+
+.first-block-rel:hover .first-block-para,
+.first-block-rel:hover .social-sites {
+  display: block;
+}
+
+.first-block-rel:hover .block-img-thumbnail {
+  display: none;
+}
+
+.first-block  {
+  position: relative;
+  height: 315px;
+  width: 100%;
+  background-color: #f8f8f8;
+  border-radius: 5px;
+  box-shadow: 0px 5px 0px 0px rgba(0, 0, 0, 0.116);
+}
+
+.block-img-thumbnail {
+  width: 100%;
+}
+
+.first-block-para {
+  display: none;
+  padding: 40px;
+  font-size: 14px;
+  color: white;
+}
+
+.social-sites {
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 20px;
+  padding-bottom: 60px;
+  height: 40px;
+  display: none;
+}
+
+.social-site-link {
+  display: inline-block;
+  width: calc(25% - 5px);
+}
+
+.social-site-link img {
+  width: 100%;
+}
+
+.first-block-button {
+  position: absolute;
+  left: 0px;
+  bottom: -20px;
+  width: 100%;
+  z-index: 5;
+  text-align: center;
+}
+
+.first-block-button a {
+  display: block;
+  width: 70%;
+  margin: 0px auto;
+  border-radius: 5px;
+  padding: 10px 0px; 
+  line-height: 1.5;
+  font-size: 14px;
+  color: white;
+  text-decoration: none;
+  background-color: #99a3a4;
+  box-shadow: 0px 5px 0px 0px rgba(0, 0, 0, 0.116);
+}
+
+.content-3 {
+  background-color: rgb(247, 247, 247);
+}
+
+.slider-container {
+  position: relative;
+  width: calc(100% - 125px);
+  margin-right: 20px;
+}
+
+.slider-text {
+  position: absolute;
+  height: 40px;
+  top: 0px;
+  left: 0px;
+  z-index: 100;
+  background-color: rgb(247, 247, 247);
+  font-weight: 600;
+}
+
+.slider-text::after {
+  content: '';
+  position: absolute;
+  right: 0px;
+  top: calc(50% - 4px);
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+  background-color: #838a8b;
+}
+
+.slide-button {
+  width: 100px;
+}
+
+.slide-button-left {
+  height: 40px;
+  width: 40px;
+  background: url(../images/slideButLeftgray.png);
+}
+.slide-button-left:hover {
+  background: url(../images/slideButLeft.png);
+  cursor: pointer;
+}
+.slide-button-right {
+  height: 40px;
+  width: 40px;
+  background: url(../images/slideButRightgray.png);
+}
+.slide-button-right:hover {
+  background: url(../images/slideButRight.png);
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 1200px) {
+  .nav-bar-links li {
+    margin: auto 10px;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .container-wrapper {
+    width: calc(100% - 40px);
+    padding: 20px;
+  }
+
+  .header-bot-arrow {
+    left: 8px;
+  }
+
+  .indicator {
+    width: calc(24% - 5px);
+    padding: 0px;
+  }
+
+  .indicator-value {
+    font-size: calc(0.6em + 5px);
+  }
+
+  .indicator-text {
+    font-size: 0.6em;
+    padding: 0px;
+  }
+  
+}
+
+@media only screen and (min-width: 800px) {
+  .tollens-logo {
+    float: left;
+    margin-bottom: 0px;
+  }
+
+  .nav-bar-links {
+    float: right;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .media-800-block,
+  .media-800-block:nth-child(2) {
+    width: 80%;
+    display: block;
+    margin-bottom: 30px;
+  }
+
+  .first-block-rel {
+    display: block;
+    width: 50%;
+    margin: 20px auto;
+  }
+}
+
+@media only screen and (min-width: 620px) {
+  .nav-bar-links li {
+    float: left;
+  }
+
+  .nav-bar-links li:last-child {
+    float: left;
+  }
+
+  .search-bar {
+    left: unset;
+    right: 0px;
+  }
+}
+
+@media only screen and (max-width: 620px) {
+  .media-800-block,
+  .media-800-block:nth-child(2) {
+    width: 100%;
+    display: block;
+    margin-bottom: 30px;
+  }
+
+  .social-sites {
+    padding: 20px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .first-block-rel {
+    width: 90%;
+    margin: 20px auto;
+  }
+}
+
+@media only screen and (max-width: 1350px) {
+  .first-block-para {
+    padding: 20px;
+  }
+}

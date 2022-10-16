@@ -25,8 +25,8 @@ function Cube(context, positionPoint, cubeHeight, cubeWidth, cubeDepth, cubeColo
   this.boundingRect = [];
 
   this.drawShape = function () {
-    context.fillStyle = cubeColor;
-    // context.strokeStyle = context.setLineDash([]);
+    // context.fillStyle = cubeColor;
+    context.strokeStyle = cubeColor //context.setLineDash([]);
     context.beginPath();
     context.moveTo(this.point_FLT[0], this.point_FLT[1]);
     context.lineTo(this.point_DLT[0], this.point_DLT[1]);
@@ -34,7 +34,7 @@ function Cube(context, positionPoint, cubeHeight, cubeWidth, cubeDepth, cubeColo
     context.lineTo(this.point_FLB[0], this.point_FLB[1]);
     context.lineTo(this.point_FLT[0], this.point_FLT[1]);
 
-    context.fill();
+    context.stroke();
     context.beginPath();
     context.moveTo(this.point_FLT[0], this.point_FLT[1]);
     context.lineTo(this.point_FRT[0], this.point_FRT[1]);
@@ -42,7 +42,7 @@ function Cube(context, positionPoint, cubeHeight, cubeWidth, cubeDepth, cubeColo
     context.lineTo(this.point_FLB[0], this.point_FLB[1]);
     context.lineTo(this.point_FLT[0], this.point_FLT[1]);
 
-    context.fill();
+    context.stroke();
     context.beginPath();
     context.moveTo(this.point_FRT[0], this.point_FRT[1]);
     context.lineTo(this.point_DRT[0], this.point_DRT[1]);
@@ -50,7 +50,7 @@ function Cube(context, positionPoint, cubeHeight, cubeWidth, cubeDepth, cubeColo
     context.lineTo(this.point_FRB[0], this.point_FRB[1]);
     context.lineTo(this.point_FRT[0], this.point_FRT[1]);
 
-    context.fill();
+    context.stroke();
     context.beginPath();
     context.moveTo(this.point_DLT[0], this.point_DLT[1]);
     context.lineTo(this.point_DRT[0], this.point_DRT[1]);
@@ -58,7 +58,7 @@ function Cube(context, positionPoint, cubeHeight, cubeWidth, cubeDepth, cubeColo
     context.lineTo(this.point_DLB[0], this.point_DLB[1]);
     context.lineTo(this.point_DLT[0], this.point_DLT[1]);
 
-    context.fill();
+    context.stroke();
     context.beginPath();
     context.moveTo(this.point_FLT[0], this.point_FLT[1]);
     context.lineTo(this.point_FRT[0], this.point_FRT[1]);
@@ -66,7 +66,7 @@ function Cube(context, positionPoint, cubeHeight, cubeWidth, cubeDepth, cubeColo
     context.lineTo(this.point_DLT[0], this.point_DLT[1]);
     context.lineTo(this.point_FLT[0], this.point_FLT[1]);
 
-    context.fill();
+    context.stroke();
     context.beginPath();
     context.moveTo(this.point_FLB[0], this.point_FLB[1]);
     context.lineTo(this.point_FRB[0], this.point_FRB[1]);
@@ -75,7 +75,7 @@ function Cube(context, positionPoint, cubeHeight, cubeWidth, cubeDepth, cubeColo
     context.lineTo(this.point_FLB[0], this.point_FLB[1]);
     context.closePath();
 
-    context.fill();
+    context.stroke();
 
   }
   // ***********************************************************Stretch***********
